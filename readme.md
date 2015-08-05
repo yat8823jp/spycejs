@@ -18,11 +18,11 @@
 * gulp-ejs //htmlの書き出し＆テンプレートファイルインクルード,
 * gulp-replace //文字列置き換え
 
-##依存アプリケーション
+##依存アプリケーション等
 
-* bower
-* npm
-* gulp
+* [bower](http://bower.io/])
+* [npm](https://www.npmjs.com/)
+* [gulp](http://gulpjs.com/)
 
 ### インストール
 
@@ -40,6 +40,16 @@
 ` gulp `　- defaultで設定しているtaskが起動する
 
 ` gulp *** ` - *** のtaskを起動する
+
+### Author
+
+YAT [http://wp.yat-net.com](http://wp.yat-net.com)
+
+Chiaki [http://mellowchanter.info/](http://mellowchanter.info/)
+
+###Version
+
+2015.08.05 1.0
 
 
 

@@ -23,7 +23,7 @@ var gulp = require( 'gulp' ),
 		dstrootDir : 'htdocs/',
 		srcDir : 'dev/images',
 		dstDir : 'htdocs/images',
-		serverDir : 'ms_test'
+		serverDir : 'localhost'
 	}
 
 

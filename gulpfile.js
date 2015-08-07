@@ -93,7 +93,7 @@ gulp.task('html', function () {
 gulp.task('ejs', function () {
 	gulp.src(["dev/**/*.ejs", '!' + "dev/**/_*.ejs"])
 		.pipe(ejs())
-		.pipe( gulp.dest( 'dev' ) );
+		.pipe( gulp.dest( 'dev/' ) );
 });
 
 

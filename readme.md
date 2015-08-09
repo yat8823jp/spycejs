@@ -63,6 +63,8 @@ YAT [http://wp.yat-net.com](http://wp.yat-net.com)
 Chiaki [http://mellowchanter.info/](http://mellowchanter.info/)
 
 ###Version
+2015.08.09 1.1.2 テンプレートファイル追加
+
 2015.08.09 1.1.1 フォルダ名変更 template → ejs
 
 2015.08.06 1.1 EditorConfig merge

@@ -76,7 +76,7 @@ gulp.task('imageminPngquant', function () {
 gulp.task('html', function () {
 	var assets = useref.assets();
 
-	return gulp.src( 'dev/**/*.+(html|php|js|css)' )
+	return gulp.src( 'dev/**/*.+(html|php|)' )
 		.pipe( gulpif( '*.html', replace( '/images', '/' + paths.serverDir + '/images' ) ) )
 		.pipe( gulpif( '*.html', replace( 'href="/', 'href="/' + paths.serverDir + '/' ) ) )
 		.pipe( assets )
@@ -91,9 +91,12 @@ gulp.task('html', function () {
 * ejs
 */
 gulp.task('ejs', function () {
-	gulp.src(["dev/**/*.ejs", '!' + "dev/**/_*.ejs"])
+	gulp.src(["dev/ejs/*.ejs", '!' + "dev/ejs/_*.ejs"])
 		.pipe(ejs())
-		.pipe( gulp.dest( 'dev/' ) );
+		.pipe(plumber({
+			errorHandler: notify.onError( 'Error: <%= error.message %>' )
+		}))
+		.pipe( gulp.dest( 'dev' ) );
 });
 
 
@@ -122,10 +125,11 @@ gulp.task( 'bs-reload', function () {
 gulp.task( 'default', ['browser-sync'], function() {
 	var bsList = [
 		'dev/**/*.html',
+		'dev/**/*.php',
 		'dev/js/**/*.js',
-		'dev/css/*.css',
-		'dev/css/*.php'
+		'dev/css/*.css'
 	];
+	gulp.watch( 'dev/ejs/**/*.ejs', ['ejs'] );
 	gulp.watch( 'dev/scss/**/*.scss', ['scss'] );
 	gulp.watch( 'dev/css/*.css', ['pleeease'] );
 	gulp.watch( bsList, ['bs-reload']);

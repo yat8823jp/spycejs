@@ -42,7 +42,11 @@
 エラーが出たら `sudo` をつける
 
 ### Usage
-開発を行うファイルはdevディレクトリの中に入れてください。
+* 開発を行うファイルはdevディレクトリの中に入れてください。
+* htmlの吐き出し元となる、ejsファイルをejsフォルダの中にいれて開発してください。監視中、ejsフォルダのファイルが更新されると、devフォルダに吐出されます。
+  * 例）dev/ejs/index.ejs → dev/index.html 
+* 開発が終わったら、 `ejs build` コマンドを利用し、devファルダに吐出さているファイルより、htdocsのフォルダに全ファイルが吐出されます。
+  * 例）dev/index.html → htdocs/index.html 
 
 ### 起動コマンド
 ` gulp `　- defaultで設定しているtaskが起動する
@@ -56,6 +60,7 @@ YAT [http://wp.yat-net.com](http://wp.yat-net.com)
 Chiaki [http://mellowchanter.info/](http://mellowchanter.info/)
 
 ###Version
+2015.08.09 1.1.1 フォルダ名変更 template → ejs
 
 2015.08.06 1.1 EditorConfig merge
 

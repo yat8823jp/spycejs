@@ -51,6 +51,7 @@
   * 例）`<!-- build:css css/common.css -->` 〜 `<!-- endbuild -->`
 * 開発が終わったら、 `ejs build` コマンドを利用し、devファルダに吐出さているファイルより、htdocsのフォルダに全ファイルが吐出されます。
   * 例）dev/index.html → htdocs/index.html 
+* bowerで管理するファイルはコンパイル時に結合されるので、htdocsにbowerのディレクトリが入ることはありません。また、移す必要もありません。
 
 ### 起動コマンド
 ` gulp `　- defaultで設定しているtaskが起動する

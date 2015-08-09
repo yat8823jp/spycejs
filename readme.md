@@ -45,6 +45,9 @@
 * 開発を行うファイルはdevディレクトリの中に入れてください。
 * htmlの吐き出し元となる、ejsファイルをejsフォルダの中にいれて開発してください。監視中、ejsフォルダのファイルが更新されると、devフォルダに吐出されます。
   * 例）dev/ejs/index.ejs → dev/index.html 
+* index.ejs、共通テンプレート用の_head.ejs、_foot.ejsを入れています。
+* コンパイル時にcss、jsファイルは結合されます。デフォルトで入っているものを利用すれば、コンパイルjの書き出しの設定をコメントにして入れています。必要に応じて書き換えてください。
+  * 例）`<!-- build:css css/common.css -->` 〜 `<!-- endbuild -->`
 * 開発が終わったら、 `ejs build` コマンドを利用し、devファルダに吐出さているファイルより、htdocsのフォルダに全ファイルが吐出されます。
   * 例）dev/index.html → htdocs/index.html 
 

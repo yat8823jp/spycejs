@@ -76,7 +76,7 @@ gulp.task('imageminPngquant', function () {
 gulp.task('html', function () {
 	var assets = useref.assets();
 
-	return gulp.src( 'dev/**/*.+(html|php|)' )
+	return gulp.src( 'dev/**/*.+(html|php)' )
 		.pipe( gulpif( '*.html', replace( '/images', '/' + paths.serverDir + '/images' ) ) )
 		.pipe( gulpif( '*.html', replace( 'href="/', 'href="/' + paths.serverDir + '/' ) ) )
 		.pipe( assets )
@@ -106,7 +106,7 @@ gulp.task('ejs', function () {
 gulp.task( 'browser-sync', function() {
 	browserSync.init({
 		server: {
-			baseDir: 'dev',
+			baseDir: 'dev/',
 			routes: {
 				"/bower_components": "bower_components"
 			}

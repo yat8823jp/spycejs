@@ -23,6 +23,7 @@
 * [bower](http://bower.io/])
 * [npm](https://www.npmjs.com/)
 * [gulp](http://gulpjs.com/)
+* [reset.css](http://meyerweb.com/eric/tools/css/reset/)
 
 ## 設定ファイル
 

@@ -76,7 +76,7 @@ gulp.task('imageminPngquant', function () {
 gulp.task('html', function () {
 	var assets = useref.assets();
 
-	return gulp.src( 'dev/**/*.+(html|php)' )
+	return gulp.src( 'dev/**/*.+(html|php|js|css)' )
 		.pipe( gulpif( '*.html', replace( '/images', '/' + paths.serverDir + '/images' ) ) )
 		.pipe( gulpif( '*.html', replace( 'href="/', 'href="/' + paths.serverDir + '/' ) ) )
 		.pipe( assets )

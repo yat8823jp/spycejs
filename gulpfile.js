@@ -43,11 +43,23 @@ gulp.task( 'scss', function() {
  * Pleeease
  */
 gulp.task('pleeease', function() {
-	return gulp.src( 'dev/css/*.css' )
-		.pipe( pleeease({
-			sass: true
-		}) )
-		.pipe( gulp.dest('dev/css/') );
+	return gulp.src( paths.rootDir + '/css/*.css' )
+	.pipe($.plumber({
+		errorHandler: function(error) {
+			var title = '[task]' + taskName + ' ' + error.plugin;
+			var errorMsg = 'error: ' + error.message;
+			console.error(title + '\n' + errorMsg); // node-notifierがデスクトップ通知をしてくれる
+			notifier.notify({
+				title: title,
+				message: errorMsg,
+				time: 3000
+			});
+		}
+	}))
+	.pipe( pleeease({
+		sass: true
+	}) )
+	.pipe( gulp.dest( paths.rootDir + '/css' ) );
 });
 
 /*

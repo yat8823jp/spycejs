@@ -9,34 +9,31 @@ var gulp = require( 'gulp' ),
 	imagemin = require( 'gulp-imagemin' ),//画像圧縮
 	imageminPngquant = require( 'imagemin-pngquant' ),//png画像の圧縮
 	pleeease = require( 'gulp-pleeease' ),//ベンダープレフィックス
-	useref = require('gulp-useref'),//ファイル結合
-	gulpif = require('gulp-if'),// if文
-	uglify = require('gulp-uglify'),//js圧縮
-	minifyCss = require('gulp-minify-css'),//css圧縮
-	del = require('del'),//ディレクトリ削除
-	runSequence = require('run-sequence'),//並行処理
-	fs = require('fs'),//jsonファイル読み込み
-	ejs = require("gulp-ejs"),
-	replace = require('gulp-replace'),
+	useref = require( 'gulp-useref' ),//ファイル結合
+	gulpif = require( 'gulp-if' ),// if文
+	uglify = require( 'gulp-uglify' ),//js圧縮
+	minifyCss = require( 'gulp-minify-css' ),//css圧縮
+	del = require( 'del' ),//ディレクトリ削除
+	runSequence = require( 'run-sequence' ),//並行処理
+	ejs = require( 'gulp-ejs' ),
+	replace = require( 'gulp-replace' ),
 	paths = {
 		rootDir : 'dev',
-		dstrootDir : 'htdocs/',
+		dstrootDir : 'htdocs',
 		srcDir : 'dev/images',
 		dstDir : 'htdocs/images',
 		serverDir : 'localhost'
 	}
 
-
-
 /*
- * Compass
+ * Sass
  */
 gulp.task( 'scss', function() {
-	return scss( 'dev/scss/', { style: 'expanded' } )
+	return scss( paths.rootDir + '/scss/', { style: 'expanded' } )
 		.pipe(plumber({
 			errorHandler: notify.onError( 'Error: <%= error.message %>' )
 		}))
-		.pipe( gulp.dest( 'dev/css' ) );
+		.pipe( gulp.dest( paths.rootDir + '/css' ) );
 });
 
 /*
@@ -44,6 +41,7 @@ gulp.task( 'scss', function() {
  */
 gulp.task('pleeease', function() {
 	return gulp.src( paths.rootDir + '/css/*.css' )
+<<<<<<< HEAD
 	.pipe($.plumber({
 		errorHandler: function(error) {
 			var title = '[task]' + taskName + ' ' + error.plugin;
@@ -60,6 +58,12 @@ gulp.task('pleeease', function() {
 		sass: true
 	}) )
 	.pipe( gulp.dest( paths.rootDir + '/css' ) );
+=======
+		.pipe( pleeease({
+			sass: true
+		}) )
+		.pipe( gulp.dest( paths.rootDir + '/css' ) );
+>>>>>>> ec0a622259a5824e4fe83afa08ee3883640d20ee
 });
 
 /*
@@ -88,27 +92,27 @@ gulp.task('imageminPngquant', function () {
 gulp.task('html', function () {
 	var assets = useref.assets();
 
-	return gulp.src( 'dev/**/*.+(html|php)' )
+	return gulp.src( paths.rootDir + '/**/*.+(html|php)' )
 		.pipe( gulpif( '*.html', replace( '/images', '/' + paths.serverDir + '/images' ) ) )
 		.pipe( gulpif( '*.html', replace( 'href="/', 'href="/' + paths.serverDir + '/' ) ) )
 		.pipe( assets )
-		// .pipe( gulpif( '*.js', uglify() ) )
-		// .pipe( gulpif( '*.css', minifyCss() ) )
+		.pipe( gulpif( '*.js', uglify() ) )
+		.pipe( gulpif( '*.css', minifyCss() ) )
 		.pipe( assets.restore() )
 		.pipe( useref() )
-		.pipe( gulp.dest( 'htdocs' ) );
+		.pipe( gulp.dest( paths.dstrootDir ) );
 });
 
 /*
 * ejs
 */
-gulp.task('ejs', function () {
-	gulp.src(["dev/ejs/*.ejs", '!' + "dev/ejs/_*.ejs"])
+gulp.task( 'ejs', function () {
+	gulp.src( [paths.rootDir + '/ejs/*.ejs', '!' + paths.rootDir + '/ejs/_*.ejs'] )
 		.pipe(ejs())
 		.pipe(plumber({
 			errorHandler: notify.onError( 'Error: <%= error.message %>' )
 		}))
-		.pipe( gulp.dest( 'dev' ) );
+		.pipe( gulp.dest( paths.rootDir ) );
 });
 
 
@@ -118,7 +122,7 @@ gulp.task('ejs', function () {
 gulp.task( 'browser-sync', function() {
 	browserSync.init({
 		server: {
-			baseDir: 'dev/',
+			baseDir: paths.rootDir,
 			routes: {
 				"/bower_components": "bower_components"
 			}
@@ -136,29 +140,29 @@ gulp.task( 'bs-reload', function () {
  */
 gulp.task( 'default', ['browser-sync'], function() {
 	var bsList = [
-		'dev/**/*.html',
-		'dev/**/*.php',
-		'dev/js/**/*.js',
-		'dev/css/*.css'
+		paths.rootDir + '/**/*.html',
+		paths.rootDir + '/**/*.php',
+		paths.rootDir + '/js/**/*.js',
+		paths.rootDir + '/css/*.css'
 	];
-	gulp.watch( 'dev/ejs/**/*.ejs', ['ejs'] );
-	gulp.watch( 'dev/scss/**/*.scss', ['scss'] );
-	gulp.watch( 'dev/css/*.css', ['pleeease'] );
+	gulp.watch( paths.rootDir + '/ejs/**/*.ejs', ['ejs'] );
+	gulp.watch( paths.rootDir + '/scss/**/*.scss', ['scss'] );
+	gulp.watch( paths.rootDir + '/css/*.css', ['pleeease'] );
 	gulp.watch( bsList, ['bs-reload']);
 });
 
 /*
  * Build
  */
-gulp.task( 'clean', del.bind( null, ['htdocs'] ) );
+gulp.task( 'clean', del.bind( null, [paths.dstrootDir] ) );
 gulp.task( 'devcopy', function () {
 	return gulp.src([
-		'dev/*.*',
-		'!dev/**/*.ejs',
-		'!dev/*.html'
+		paths.rootDir + '/*.*',
+		'!'+ paths.rootDir + '/**/*.ejs',
+		'!'+ paths.rootDir + '/*.html'
 	], {
 		dot: true
-	}).pipe( gulp.dest( 'htdocs' ) );
+	}).pipe( gulp.dest( paths.dstrootDir ) );
 });
 gulp.task( 'build', ['clean'], function ( cb ) {
 	runSequence( 'scss', 'ejs', ['html', 'imagemin', 'imageminPngquant', 'devcopy'], cb );

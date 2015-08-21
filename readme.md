@@ -20,7 +20,7 @@
 
 ## 依存アプリケーション等
 
-* [bower](http://bower.io/])
+* [bower](http://bower.io/)
 * [npm](https://www.npmjs.com/)
 * [gulp](http://gulpjs.com/)
 * [reset.css](http://meyerweb.com/eric/tools/css/reset/)
@@ -45,12 +45,12 @@
 ### Usage
 * 開発を行うファイルはdevディレクトリの中に入れてください。
 * htmlの吐き出し元となる、ejsファイルをejsフォルダの中にいれて開発してください。監視中、ejsフォルダのファイルが更新されると、devフォルダに吐出されます。
-  * 例）dev/ejs/index.ejs → dev/index.html 
+  * 例）dev/ejs/index.ejs → dev/index.html
 * index.ejs、共通テンプレート用の_head.ejs、_foot.ejsを入れています。
-* コンパイル時にcss、jsファイルは結合されます。デフォルトで入っているものを利用すれば、コンパイルjの書き出しの設定をコメントにして入れています。必要に応じて書き換えてください。
+* コンパイル時にcss、jsファイルは結合されます。デフォルトで入っているものを利用すれば、コンパイル時の書き出しの設定をコメントにして入れています。必要に応じて書き換えてください。
   * 例）`<!-- build:css css/common.css -->` 〜 `<!-- endbuild -->`
-* 開発が終わったら、 `ejs build` コマンドを利用し、devファルダに吐出さているファイルより、htdocsのフォルダに全ファイルが吐出されます。
-  * 例）dev/index.html → htdocs/index.html 
+* 開発が終わったら、 `gulp build` コマンドを利用し、devフォルダに吐出さているファイルより、htdocsのフォルダに全ファイルが吐出されます。
+  * 例）dev/index.html → htdocs/index.html
 * bowerで管理するファイルはコンパイル時に結合されるので、htdocsにbowerのディレクトリが入ることはありません。また、移す必要もありません。
 
 ### 起動コマンド
@@ -72,6 +72,3 @@ Chiaki [http://mellowchanter.info/](http://mellowchanter.info/)
 2015.08.06 1.1 EditorConfig merge
 
 2015.08.05 1.0
-
-
-

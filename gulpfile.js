@@ -41,7 +41,6 @@ gulp.task( 'scss', function() {
  */
 gulp.task('pleeease', function() {
 	return gulp.src( paths.rootDir + '/css/*.css' )
-<<<<<<< HEAD
 	.pipe($.plumber({
 		errorHandler: function(error) {
 			var title = '[task]' + taskName + ' ' + error.plugin;
@@ -58,12 +57,6 @@ gulp.task('pleeease', function() {
 		sass: true
 	}) )
 	.pipe( gulp.dest( paths.rootDir + '/css' ) );
-=======
-		.pipe( pleeease({
-			sass: true
-		}) )
-		.pipe( gulp.dest( paths.rootDir + '/css' ) );
->>>>>>> ec0a622259a5824e4fe83afa08ee3883640d20ee
 });
 
 /*

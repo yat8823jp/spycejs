@@ -14,7 +14,8 @@
 <body>
 
 <!--↓read-temlatefile-->
-<% include _head %>
+<header>
+</header>
 
 <main>
 
@@ -23,7 +24,18 @@
 </main>
 
 <!--↓read-temlatefile-->
-<% include _foot %>
+<footer>
+</footer>
+
+<!-- ↓file combine config-->
+<!-- build:js js/lib.js -->
+<script src="../bower_components/jQuery/dist/jquery.min.js"></script>
+<script src="../bower_components/slick-carousel/slick/slick.min.js"></script>
+<!-- endbuild -->
+<!-- build:js js/config.js -->
+<script src="js/config.js"></script>
+<!-- endbuild -->
+
 
 <!-- ↓file combine config-->
 <!-- build:js js/lib.js -->

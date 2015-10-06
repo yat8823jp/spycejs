@@ -24,6 +24,7 @@
 * [npm](https://www.npmjs.com/)
 * [gulp](http://gulpjs.com/)
 * [reset.css](http://meyerweb.com/eric/tools/css/reset/)
+* [sass](http://sass-lang.com/)
 
 ## 設定ファイル
 
@@ -42,6 +43,24 @@
 
 エラーが出たら `sudo` をつける
 
+#### rubyのSassをインストールする
+
+##### rubyインストール
+[RubyInstall](http://rubyinstaller.org/)
+
+上記ページよりダウンロード→インストール
+
+※Rubyの実行ファイルへ環境PATHを設定するがあればチェックを入れてください
+
+##### sassインストール
+コマンドプロンプト（ターミナル等）より
+
+` gem install sass `
+
+※管理者権限が必要であれば
+
+` sudo gem install sass `
+
 ### Usage
 * 開発を行うファイルはdevディレクトリの中に入れてください。
 * htmlの吐き出し元となる、ejsファイルをejsフォルダの中にいれて開発してください。監視中、ejsフォルダのファイルが更新されると、devフォルダに吐出されます。
@@ -52,6 +71,7 @@
 * 開発が終わったら、 `gulp build` コマンドを利用し、devフォルダに吐出さているファイルより、htdocsのフォルダに全ファイルが吐出されます。
   * 例）dev/index.html → htdocs/index.html
 * bowerで管理するファイルはコンパイル時に結合されるので、htdocsにbowerのディレクトリが入ることはありません。また、移す必要もありません。
+* scss、sassを扱うにはrubyのsassをインストールしておく必要があります。
 
 ### 起動コマンド
 ` gulp `　- defaultで設定しているtaskが起動する
@@ -65,6 +85,8 @@ YAT [http://wp.yat-net.com](http://wp.yat-net.com)
 Chiaki [http://mellowchanter.info/](http://mellowchanter.info/)
 
 ###Version
+2015.10.06 1.1.3 ruby-sassのインストール追記。モジュールアップデート他
+
 2015.08.09 1.1.2 テンプレートファイル追加
 
 2015.08.09 1.1.1 フォルダ名変更 template → ejs

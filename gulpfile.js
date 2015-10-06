@@ -29,7 +29,7 @@ var gulp = require( 'gulp' ),
  * Sass
  */
 gulp.task( 'scss', function() {
-	return scss( paths.rootDir + '/scss/', { style: 'expanded' } )
+	return scss( paths.rootDir + '/scss/**/*.scss' )
 		.pipe(plumber({
 			errorHandler: notify.onError( 'Error: <%= error.message %>' )
 		}))

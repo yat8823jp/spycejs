@@ -17,6 +17,7 @@
 * run-sequence //並行処理
 * gulp-ejs //htmlの書き出し＆テンプレートファイルインクルード,
 * gulp-replace //文字列置き換え
+* gulp-sourcemaps //ソースマップ
 
 ## 依存アプリケーション等
 
@@ -85,6 +86,8 @@ YAT [http://wp.yat-net.com](http://wp.yat-net.com)
 Chiaki [http://mellowchanter.info/](http://mellowchanter.info/)
 
 ###Version
+2015.11.08 1.1.4 sourcemapの追加
+
 2015.10.06 1.1.3 ruby-sassのインストール追記。モジュールアップデート他
 
 2015.08.09 1.1.2 テンプレートファイル追加

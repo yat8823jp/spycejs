@@ -17,6 +17,7 @@ var gulp = require( 'gulp' ),
 	runSequence = require( 'run-sequence' ),//並行処理
 	ejs = require( 'gulp-ejs' ),
 	replace = require( 'gulp-replace' ),
+	sourcemaps = require('gulp-sourcemaps'),
 	paths = {
 		rootDir : 'dev',
 		dstrootDir : 'htdocs',
@@ -30,9 +31,11 @@ var gulp = require( 'gulp' ),
  */
 gulp.task( 'scss', function() {
 	return scss( paths.rootDir + '/scss/**/*.scss' )
+		.pipe(sourcemaps.init())
 		.pipe(plumber({
 			errorHandler: notify.onError( 'Error: <%= error.message %>' )
 		}))
+		.pipe( sourcemaps.write( './' ) )
 		.pipe( gulp.dest( paths.rootDir + '/css' ) );
 });
 

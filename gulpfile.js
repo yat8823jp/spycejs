@@ -2,7 +2,7 @@
  * Global variables
  */
 var gulp = require( 'gulp' ),
-	scss = require( 'gulp-ruby-sass' ),
+	scss = require( 'gulp-sass' ),
 	browserSync = require( 'browser-sync' ),
 	plumber = require( 'gulp-plumber' ),//エラー通知
 	notify = require( 'gulp-notify' ),//エラー通知
@@ -30,11 +30,13 @@ var gulp = require( 'gulp' ),
  * Sass
  */
 gulp.task( 'scss', function() {
-	return scss( paths.rootDir + '/scss/**/*.scss' )
-		.pipe(sourcemaps.init())
-		.pipe(plumber({
+	gulp.src( paths.rootDir + '/scss/**/*.scss' )
+		.pipe( sourcemaps.init() )
+		.pipe( scss() )
+		.pipe( pleeease() )
+		.pipe( plumber({
 			errorHandler: notify.onError( 'Error: <%= error.message %>' )
-		}))
+		}) )
 		.pipe( sourcemaps.write( './' ) )
 		.pipe( gulp.dest( paths.rootDir + '/css' ) );
 });
@@ -44,22 +46,14 @@ gulp.task( 'scss', function() {
  */
 gulp.task('pleeease', function() {
 	return gulp.src( paths.rootDir + '/css/*.css' )
-	.pipe($.plumber({
-		errorHandler: function(error) {
-			var title = '[task]' + taskName + ' ' + error.plugin;
-			var errorMsg = 'error: ' + error.message;
-			console.error(title + '\n' + errorMsg); // node-notifierがデスクトップ通知をしてくれる
-			notifier.notify({
-				title: title,
-				message: errorMsg,
-				time: 3000
-			});
-		}
-	}))
-	.pipe( pleeease({
-		sass: true
-	}) )
-	.pipe( gulp.dest( paths.rootDir + '/css' ) );
+		.pipe( pleeease({
+			// minifier: false, //圧縮の有無 true/false
+			sass: true
+		}) )
+		.pipe( plumber ( {
+			errorHandler: notify.onError( 'Error: <%= error.message %>' )
+		} ) )
+		.pipe( gulp.dest( paths.rootDir + '/css' ) );
 });
 
 /*
@@ -143,7 +137,6 @@ gulp.task( 'default', ['browser-sync'], function() {
 	];
 	gulp.watch( paths.rootDir + '/ejs/**/*.ejs', ['ejs'] );
 	gulp.watch( paths.rootDir + '/scss/**/*.scss', ['scss'] );
-	gulp.watch( paths.rootDir + '/css/*.css', ['pleeease'] );
 	gulp.watch( bsList, ['bs-reload']);
 });
 

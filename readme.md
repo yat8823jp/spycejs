@@ -2,7 +2,8 @@
 
 ## パッケージ一覧
 * gulp
-* gulp-ruby-sass
+* ~~gulp-ruby-sass~~
+* gulp-sass
 * browserSync
 * plumber //エラー通知
 * notify //エラー通知
@@ -44,23 +45,6 @@
 
 エラーが出たら `sudo` をつける
 
-#### rubyのSassをインストールする
-
-##### rubyインストール
-[RubyInstall](http://rubyinstaller.org/)
-
-上記ページよりダウンロード→インストール
-
-※Rubyの実行ファイルへ環境PATHを設定するがあればチェックを入れてください
-
-##### sassインストール
-コマンドプロンプト（ターミナル等）より
-
-` gem install sass `
-
-※管理者権限が必要であれば
-
-` sudo gem install sass `
 
 ### Usage
 * 開発を行うファイルはdevディレクトリの中に入れてください。
@@ -72,7 +56,6 @@
 * 開発が終わったら、 `gulp build` コマンドを利用し、devフォルダに吐出さているファイルより、htdocsのフォルダに全ファイルが吐出されます。
   * 例）dev/index.html → htdocs/index.html
 * bowerで管理するファイルはコンパイル時に結合されるので、htdocsにbowerのディレクトリが入ることはありません。また、移す必要もありません。
-* scss、sassを扱うにはrubyのsassをインストールしておく必要があります。
 
 ### 起動コマンド
 ` gulp `　- defaultで設定しているtaskが起動する
@@ -86,6 +69,8 @@ YAT [http://wp.yat-net.com](http://wp.yat-net.com)
 Chiaki [http://mellowchanter.info/](http://mellowchanter.info/)
 
 ###Version
+2015.11.08 1.2.0 gulp-ruby-sassの廃止。gulp-sassの導入
+
 2015.11.08 1.1.4 sourcemapの追加
 
 2015.10.06 1.1.3 ruby-sassのインストール追記。モジュールアップデート他

@@ -80,15 +80,12 @@ gulp.task('imageminPngquant', function () {
  * Useref
  */
 gulp.task('html', function () {
-	var assets = useref.assets();
 
 	return gulp.src( paths.rootDir + '/**/*.+(html|php)' )
 		.pipe( gulpif( '*.html', replace( '/images', '/' + paths.serverDir + '/images' ) ) )
 		.pipe( gulpif( '*.html', replace( 'href="/', 'href="/' + paths.serverDir + '/' ) ) )
-		.pipe( assets )
 		.pipe( gulpif( '*.js', uglify() ) )
 		.pipe( gulpif( '*.css', minifyCss() ) )
-		.pipe( assets.restore() )
 		.pipe( useref() )
 		.pipe( gulp.dest( paths.dstrootDir ) );
 });

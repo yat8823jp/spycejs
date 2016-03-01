@@ -1,35 +1,17 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-	<meta charset="UTF-8">
-	<title></title>
-
-	<!-- ↓file combine config-->
-	<!-- build:css css/common.css -->
-	<link rel="stylesheet" href="css/common.css">
-	<link rel="stylesheet" href="../bower_components/reset-css/reset.css">
-	<!-- endbuild -->
-
-</head>
-<body>
-
-<!--↓read-temlatefile-->
-<% include _head %>
-
+<%-
+	include( 'layout/_head', {
+		title: 'トップページABC', // title 要素のテキスト
+		metadescription: 'トップページ用のメタディスクリプションあああ', // メタディスクリプション
+		metakeywords: 'キーワード, カンマ' // メタキーワード
+	} );
+-%>
+<%- include( 'layout/_header' ); %>
 <main>
 
-	<p class="hoge">gulp-ejs 2.0.x対応</p>
+	<p>gulp-ejs 2.0.xリリース</p>
+	<p><img src="/images/leopard.jpg" alt="ヒョウ"></p>
+	<p>※CC0</p>
 
 </main>
 
-<!--↓read-temlatefile-->
-<% include _foot %>
-
-<!-- ↓file combine config-->
-<!-- build:js js/lib.js -->
-<script src="../bower_components/jQuery/dist/jquery.min.js"></script>
-<script src="../bower_components/slick-carousel/slick/slick.min.js"></script>
-<!-- endbuild -->
-
-</body>
-</html>
+<%- include( 'layout/_footer' ); %>

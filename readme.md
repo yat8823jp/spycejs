@@ -64,11 +64,10 @@ YAT [http://wp.yat-net.com](http://wp.yat-net.com)
 Chiaki [http://mellowchanter.info/](http://mellowchanter.info/)
 
 ###Version
-<<<<<<< HEAD
-2016.03.01 2.0.0 ejs v2.0に対応
-=======
+
+2016.03.01 2.0.0 ejs v2.0に対応  
+
 2016.02.29 1.3.0 bower の利用停止、dev内を整備して`gulp` を叩くだけで開発が始められるようにしました
->>>>>>> c577bff5c82a4c0f5b05592e1f5023f77731ac6c
 
 2015.11.08 1.2.0 gulp-ruby-sassの廃止。gulp-sassの導入
 

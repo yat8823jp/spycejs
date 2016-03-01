@@ -16,8 +16,7 @@ var gulp = require( 'gulp' ),
 	del = require( 'del' ),//ディレクトリ削除
 	runSequence = require( 'run-sequence' ),//並行処理
 	ejs = require( 'gulp-ejs' ),
-	replace = require( 'gulp-replace' ),
-	sourcemaps = require('gulp-sourcemaps'),
+	sourcemaps = require( 'gulp-sourcemaps' ),
 	paths = {
 		rootDir : 'dev',
 		dstrootDir : 'htdocs',
@@ -44,7 +43,7 @@ gulp.task( 'scss', function() {
 /*
  * Pleeease
  */
-gulp.task('pleeease', function() {
+gulp.task( 'pleeease', function() {
 	return gulp.src( paths.rootDir + '/css/*.css' )
 		.pipe( pleeease({
 			// minifier: false, //圧縮の有無 true/false
@@ -70,7 +69,7 @@ gulp.task( 'imagemin', function(){
 		.pipe( imagemin( imageminOptions ) )
 		.pipe( gulp.dest( paths.dstDir ) );
 });
-gulp.task('imageminPngquant', function () {
+gulp.task( 'imageminPngquant', function () {
 	gulp.src( paths.srcDir + '/**/*.png' )
 		.pipe( imageminPngquant( {quality: '65-80', speed: 1 } )())
 		.pipe( gulp.dest( paths.dstDir ) );
@@ -79,29 +78,25 @@ gulp.task('imageminPngquant', function () {
 /*
  * Useref
  */
-gulp.task('html', function () {
-
+gulp.task( 'html', function () {
 	return gulp.src( paths.rootDir + '/**/*.+(html|php)' )
-		.pipe( gulpif( '*.html', replace( '/images', '/' + paths.serverDir + '/images' ) ) )
-		.pipe( gulpif( '*.html', replace( 'href="/', 'href="/' + paths.serverDir + '/' ) ) )
 		.pipe( gulpif( '*.js', uglify() ) )
 		.pipe( gulpif( '*.css', minifyCss() ) )
-		.pipe( useref() )
+		.pipe( useref( {searchPath: '{., dev}'} ) )
 		.pipe( gulp.dest( paths.dstrootDir ) );
 });
 
 /*
-* ejs
-*/
+ * ejs
+ */
 gulp.task( 'ejs', function () {
-	gulp.src( [paths.rootDir + '/ejs/*.ejs', '!' + paths.rootDir + '/ejs/_*.ejs'] )
+	gulp.src( [paths.rootDir + '/ejs/**/*.ejs', '!' + paths.rootDir + '/ejs/**/_*.ejs'] )
 		.pipe( ejs({}, {ext: '.html'}) )
 		.pipe(plumber({
 			errorHandler: notify.onError( 'Error: <%= error.message %>' )
 		}))
 		.pipe( gulp.dest( paths.rootDir ) );
 });
-
 
 /*
  * Browser-sync
@@ -111,7 +106,7 @@ gulp.task( 'browser-sync', function() {
 		server: {
 			baseDir: paths.rootDir,
 			routes: {
-				"/bower_components": "bower_components"
+				"/node_modules": "node_modules"
 			}
 		},
 		// proxy: "localhost:8888",
@@ -134,7 +129,7 @@ gulp.task( 'default', ['browser-sync'], function() {
 	];
 	gulp.watch( paths.rootDir + '/ejs/**/*.ejs', ['ejs'] );
 	gulp.watch( paths.rootDir + '/scss/**/*.scss', ['scss'] );
-	gulp.watch( bsList, ['bs-reload']);
+	gulp.watch( bsList, ['bs-reload'] );
 });
 
 /*
@@ -143,9 +138,10 @@ gulp.task( 'default', ['browser-sync'], function() {
 gulp.task( 'clean', del.bind( null, [paths.dstrootDir] ) );
 gulp.task( 'devcopy', function () {
 	return gulp.src([
-		paths.rootDir + '/*.*',
-		'!'+ paths.rootDir + '/**/*.ejs',
-		'!'+ paths.rootDir + '/*.html'
+		paths.rootDir + '/**/*.*',
+		'!'+ paths.rootDir + '/ejs/**',
+		'!'+ paths.rootDir + '/scss/**',
+		'!'+ paths.rootDir + '/**/*.html'
 	], {
 		dot: true
 	}).pipe( gulp.dest( paths.dstrootDir ) );

@@ -80,9 +80,9 @@ gulp.task( 'imageminPngquant', function () {
  */
 gulp.task( 'html', function () {
 	return gulp.src( paths.rootDir + '/**/*.+(html|php)' )
+		.pipe( useref( {searchPath: ['.', 'dev']} ) )
 		.pipe( gulpif( '*.js', uglify() ) )
 		.pipe( gulpif( '*.css', minifyCss() ) )
-		.pipe( useref( {searchPath: '{., dev}'} ) )
 		.pipe( gulp.dest( paths.dstrootDir ) );
 });
 
@@ -141,6 +141,7 @@ gulp.task( 'devcopy', function () {
 		paths.rootDir + '/**/*.*',
 		'!'+ paths.rootDir + '/ejs/**',
 		'!'+ paths.rootDir + '/scss/**',
+		'!'+ paths.rootDir + '/css/**',
 		'!'+ paths.rootDir + '/**/*.html'
 	], {
 		dot: true

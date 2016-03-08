@@ -17,6 +17,7 @@ var gulp = require( 'gulp' ),
 	runSequence = require( 'run-sequence' ),//並行処理
 	ejs = require( 'gulp-ejs' ),
 	sourcemaps = require( 'gulp-sourcemaps' ),
+	replace = require( 'replace' ),
 	paths = {
 		rootDir : 'dev',
 		dstrootDir : 'htdocs',
@@ -83,6 +84,10 @@ gulp.task( 'html', function () {
 		.pipe( useref( {searchPath: ['.', 'dev']} ) )
 		.pipe( gulpif( '*.js', uglify() ) )
 		.pipe( gulpif( '*.css', minifyCss() ) )
+<<<<<<< HEAD
+=======
+		.pipe( useref( {searchPath: ['.', 'dev']} ) )
+>>>>>>> ebf5e37da03c1817461ab45acca657b2f04d566c
 		.pipe( gulp.dest( paths.dstrootDir ) );
 });
 
@@ -139,6 +144,8 @@ gulp.task( 'clean', del.bind( null, [paths.dstrootDir] ) );
 gulp.task( 'devcopy', function () {
 	return gulp.src([
 		paths.rootDir + '/**/*.*',
+		'!'+ paths.rootDir + '/css/**',
+		'!'+ paths.rootDir + '/js/**',
 		'!'+ paths.rootDir + '/ejs/**',
 		'!'+ paths.rootDir + '/scss/**',
 		'!'+ paths.rootDir + '/css/**',

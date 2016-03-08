@@ -17,7 +17,6 @@ var gulp = require( 'gulp' ),
 	runSequence = require( 'run-sequence' ),//並行処理
 	ejs = require( 'gulp-ejs' ),
 	sourcemaps = require( 'gulp-sourcemaps' ),
-	replace = require( 'replace' ),
 	paths = {
 		rootDir : 'dev',
 		dstrootDir : 'htdocs',

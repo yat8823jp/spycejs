@@ -80,13 +80,9 @@ gulp.task( 'imageminPngquant', function () {
  */
 gulp.task( 'html', function () {
 	return gulp.src( paths.rootDir + '/**/*.+(html|php)' )
-		.pipe( useref( {searchPath: ['.', 'dev']} ) )
 		.pipe( gulpif( '*.js', uglify() ) )
 		.pipe( gulpif( '*.css', minifyCss() ) )
-<<<<<<< HEAD
-=======
 		.pipe( useref( {searchPath: ['.', 'dev']} ) )
->>>>>>> ebf5e37da03c1817461ab45acca657b2f04d566c
 		.pipe( gulp.dest( paths.dstrootDir ) );
 });
 

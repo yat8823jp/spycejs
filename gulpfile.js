@@ -17,6 +17,7 @@ var gulp = require( 'gulp' ),
 	runSequence = require( 'run-sequence' ),//並行処理
 	ejs = require( 'gulp-ejs' ),
 	sourcemaps = require( 'gulp-sourcemaps' ),
+	// watch = require('gulp-watch'),
 	paths = {
 		rootDir : 'dev',
 		dstrootDir : 'htdocs',
@@ -82,7 +83,7 @@ gulp.task( 'html', function () {
 	return gulp.src( paths.rootDir + '/**/*.+(html|php)' )
 		.pipe( gulpif( '*.js', uglify() ) )
 		.pipe( gulpif( '*.css', minifyCss() ) )
-		.pipe( useref( {searchPath: '{., dev}'} ) )
+		.pipe( useref( {searchPath: ['.', 'dev']} ) )
 		.pipe( gulp.dest( paths.dstrootDir ) );
 });
 
@@ -139,6 +140,8 @@ gulp.task( 'clean', del.bind( null, [paths.dstrootDir] ) );
 gulp.task( 'devcopy', function () {
 	return gulp.src([
 		paths.rootDir + '/**/*.*',
+		'!'+ paths.rootDir + '/css/**',
+		'!'+ paths.rootDir + '/js/**',
 		'!'+ paths.rootDir + '/ejs/**',
 		'!'+ paths.rootDir + '/scss/**',
 		'!'+ paths.rootDir + '/**/*.html'

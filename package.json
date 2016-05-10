@@ -11,11 +11,11 @@
   "devDependencies": {
     "browser-sync": "^2.11.1",
     "del": "^2.2.0",
-    "gulp": "^3.9.0",
-    "gulp-cssnano": "^2.1.0",
-    "gulp-ejs": "^2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.1",
+    "gulp-ejs": "^2.1.1",
     "gulp-if": "^2.0.0",
-    "gulp-imagemin": "^2.4.0",
+    "gulp-imagemin": "^3.0.0",
     "gulp-notify": "^2.2.0",
     "gulp-pleeease": "^2.0.2",
     "gulp-plumber": "^1.0.1",
@@ -23,10 +23,11 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.1",
     "gulp-useref": "^3.0.5",
+    "gulp-watch": "^4.3.5",
     "html5shiv": "^3.7.3",
-    "imagemin-pngquant": "^4.2.0",
+    "imagemin-pngquant": "^5.0.0",
     "run-sequence": "^1.1.5",
-    "sanitize.css": "^3.2.0"
+    "sanitize.css": "^3.3.0"
   },
   "private": true,
   "dependencies": {}

@@ -17,6 +17,7 @@ var gulp = require( 'gulp' ),
 	runSequence = require( 'run-sequence' ),//並行処理
 	ejs = require( 'gulp-ejs' ),
 	sourcemaps = require( 'gulp-sourcemaps' ),
+	// watch = require('gulp-watch'),
 	paths = {
 		rootDir : 'dev',
 		dstrootDir : 'htdocs',
@@ -31,11 +32,11 @@ var gulp = require( 'gulp' ),
 gulp.task( 'scss', function() {
 	gulp.src( paths.rootDir + '/scss/**/*.scss' )
 		.pipe( sourcemaps.init() )
-		.pipe( scss() )
-		.pipe( pleeease() )
 		.pipe( plumber({
 			errorHandler: notify.onError( 'Error: <%= error.message %>' )
 		}) )
+		.pipe( scss() )
+		.pipe( pleeease() )
 		.pipe( sourcemaps.write( './' ) )
 		.pipe( gulp.dest( paths.rootDir + '/css' ) );
 });

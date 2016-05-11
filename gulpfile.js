@@ -60,19 +60,18 @@ gulp.task( 'pleeease', function() {
  * Imagemin
  */
 gulp.task( 'imagemin', function(){
-	var srcGlob = paths.srcDir + '/**/*.+(jpg|jpeg|gif|svg)';
+	var srcGlob = paths.srcDir + '/**/*.+(jpg|jpeg|png|gif|svg)';
 	var dstGlob = paths.dstDir;
 	var imageminOptions = {
-		optimizationLevel: 7
+		optimizationLevel: 7,
+		use: imageminPngquant( {quality: '65-80', speed: 1 } )
 	};
 
 	gulp.src( srcGlob )
+		.pipe( plumber ( {
+			errorHandler: notify.onError( 'Error: <%= error.message %>' )
+		} ) )
 		.pipe( imagemin( imageminOptions ) )
-		.pipe( gulp.dest( paths.dstDir ) );
-});
-gulp.task( 'imageminPngquant', function () {
-	gulp.src( paths.srcDir + '/**/*.png' )
-		.pipe( imageminPngquant( {quality: '65-80', speed: 1 } )())
 		.pipe( gulp.dest( paths.dstDir ) );
 });
 
@@ -144,11 +143,12 @@ gulp.task( 'devcopy', function () {
 		'!'+ paths.rootDir + '/js/**',
 		'!'+ paths.rootDir + '/ejs/**',
 		'!'+ paths.rootDir + '/scss/**',
+		'!'+ paths.rootDir + '/css/**',
 		'!'+ paths.rootDir + '/**/*.html'
 	], {
 		dot: true
 	}).pipe( gulp.dest( paths.dstrootDir ) );
 });
 gulp.task( 'build', ['clean'], function ( cb ) {
-	runSequence( 'scss', 'ejs', ['html', 'imagemin', 'imageminPngquant', 'devcopy'], cb );
+	runSequence( 'scss', 'ejs', ['html', 'imagemin', 'devcopy'], cb );
 });

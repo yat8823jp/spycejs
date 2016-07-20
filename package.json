@@ -27,7 +27,7 @@
     "html5shiv": "^3.7.3",
     "imagemin-pngquant": "^5.0.0",
     "run-sequence": "^1.1.5",
-    "sanitize.css": "^3.3.0"
+    "sanitize.css": "^4.1.0"
   },
   "private": true,
   "dependencies": {}

@@ -65,6 +65,10 @@ Chiaki [http://mellowchanter.info/](http://mellowchanter.info/)
 
 ###Version
 
+2016.07.20 2.0.2 sanitize.css のアップデート  
+
+2016.06.26 2.0.1 sanitize.css のパスが変わっていたので修正  
+
 2016.03.01 2.0.0 ejs v2.0に対応  
 
 2016.02.29 1.3.0 bower の利用停止、dev内を整備して`gulp` を叩くだけで開発が始められるようにしました

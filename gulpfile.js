@@ -80,9 +80,9 @@ gulp.task( 'imagemin', function(){
  */
 gulp.task( 'html', function () {
 	return gulp.src( paths.rootDir + '/**/*.+(html|php)' )
+		.pipe( useref( {searchPath: ['.', 'dev']} ) )
 		.pipe( gulpif( '*.js', uglify() ) )
 		.pipe( gulpif( '*.css', minifyCss() ) )
-		.pipe( useref( {searchPath: ['.', 'dev']} ) )
 		.pipe( gulp.dest( paths.dstrootDir ) );
 });
 
@@ -91,10 +91,10 @@ gulp.task( 'html', function () {
  */
 gulp.task( 'ejs', function () {
 	gulp.src( [paths.rootDir + '/ejs/**/*.ejs', '!' + paths.rootDir + '/ejs/**/_*.ejs'] )
-		.pipe( ejs({}, {ext: '.html'}) )
 		.pipe(plumber({
 			errorHandler: notify.onError( 'Error: <%= error.message %>' )
 		}))
+		.pipe( ejs({}, {ext: '.html'}) )
 		.pipe( gulp.dest( paths.rootDir ) );
 });
 
@@ -143,7 +143,7 @@ gulp.task( 'devcopy', function () {
 		'!'+ paths.rootDir + '/js/**',
 		'!'+ paths.rootDir + '/ejs/**',
 		'!'+ paths.rootDir + '/scss/**',
-		'!'+ paths.rootDir + '/css/**',
+		'!'+ paths.rootDir + '/images/**',
 		'!'+ paths.rootDir + '/**/*.html'
 	], {
 		dot: true

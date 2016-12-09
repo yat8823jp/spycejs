@@ -65,6 +65,9 @@ Chiaki [http://mellowchanter.info/](http://mellowchanter.info/)
 
 ###Version
 
+#### 2.0.1
+* モジュールアップデート （browser-sync del gulp-ejs gulp-if gulp-imagemin gulp-sourcemaps gulp-useref gulp-watch jquery）
+
 #### 2.1
 * パッケージアップデート（browser-sync, del, gulp-ejs, gulp-imagemin, gulp-sass）
 * html5shiv の削除

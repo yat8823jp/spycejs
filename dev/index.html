@@ -12,23 +12,88 @@
 
 	<!-- build:css /css/common.css -->
 	<link rel="stylesheet" href="/node_modules/sanitize.css/sanitize.css">
+	<link rel="stylesheet" href="/js/slick/slick.css">
+	<link rel="stylesheet" href="/js/slick/slick-theme.css">
 	<link rel="stylesheet" href="/css/common.css">
 	<!-- endbuild -->
 </head>
-<body>
-<header class="l-header">
+<body id="pagetop">
+<header class="l-header is-header">
 	<article class="l-header__main">
-		<h1 class="l-header__main__logo"><img src="/images/common/header/logo.png" alt="logo" width="42"></h1>
-		<a class="l-header__main__smenubt c-buttom--smenu" href="#">Menu</a>
-		<nav class="p-snavi">
-			<ul class="p-snavi__menu__lv1">
-				<li class="p-snavi__menu__lv1__item1">
-					<ul class="p-snavi__menu__lv2">
-						<li class="p-snavi__menu__lv2__item1"></li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
+		<h1 class="l-header__main__logo"><a href="/"><img src="/images/common/header/logo.png" alt="logo"></a></h1>
+		<a class="l-header__main__smenubt c-buttom--smenu is-hamburger__bt" href="#">Menu</a>
+		<div class="c-hamburger__bg is-hamburger__bg">
+			<nav class="p-snavi is-hamburger__menu">
+				<ul class="p-snavi__menu">
+					<li class="p-snavi__menu__item--close"><a href="#" class="c-button--close is-close__bt"></a></li>
+					<li class="p-snavi__menu__item--search">
+						<div class="p-snavi__menu__item--search__ttl"><i class="u-icon--search"></i><span>サイト内検索</span></div>
+						<div class="p-snavi__menu__item--search__box"><input type="search" name="sitesarch"></div>
+					</li>
+					<li class="p-snavi__menu__item--regist"><a href="#"><i class="u-icon--key"></i><span>ログイン・新規登録</span></a></li>
+					<li class="p-snavi__menu__item--shop u-border--snavi--separator"><a href="#"><i class="u-icon--shop"></i><span>店舗検索</span></a></li>
+					<li class="p-snavi__menu__item u-mt8"><a href="#">ブランド一覧</a></li>
+					<li class="p-snavi__menu__item"><a href="#" class="p-snavi__menu__item__bt">下着を探す<i class="u-arrow--bottom"></i></a></li>
+					<li class="p-snavi__menu__lv2 is-close">
+						<ul class="p-snavi__menu__lv2__list">
+							<li class="p-snavi__menu__item"><a href="#">ランキング</a></li>
+							<li class="p-snavi__menu__item"><a href="#">ピックアップ</a></li>
+							<li class="p-snavi__menu__item"><a href="#">新着コンテンツ</a></li>
+							<li class="p-snavi__menu__item"><a href="#">レビュー一覧</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">ブラジャー</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">ショーツ</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">ルームウェア</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">スポーツ</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">メンズ</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">マタニティ</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">ジュニア</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">ブライダル</a></li>
+							<li class="p-snavi__menu__item"><a href="#">+ 別のアイテムを探す</a></li>
+						</ul>
+					</li>
+					<li class="p-snavi__menu__item"><a href="#" class="p-snavi__menu__item__bt">How to＆読み物<i class="u-arrow--bottom"></i></a></li>
+					<li class="p-snavi__menu__lv2 is-close">
+						<ul class="p-snavi__menu__lv2__list">
+							<li class="p-snavi__menu__item"><a href="#">ランキング</a></li>
+							<li class="p-snavi__menu__item"><a href="#">ピックアップ</a></li>
+							<li class="p-snavi__menu__item"><a href="#">新着コンテンツ</a></li>
+							<li class="p-snavi__menu__item"><a href="#">レビュー一覧</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">ブラジャー</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">ショーツ</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">ルームウェア</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">スポーツ</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">メンズ</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">マタニティ</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">ジュニア</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">ブライダル</a></li>
+							<li class="p-snavi__menu__item"><a href="#">+ 別のアイテムを探す</a></li>
+						</ul>
+					</li>
+					<li class="p-snavi__menu__item"><a href="#">旬のおすすめ</a></li>
+					<li class="p-snavi__menu__item"><a href="#">キャンペーン＆プレゼント</a></li>
+					<li class="p-snavi__menu__item"><a href="#">ニュース＆トピックス</a></li>
+					<li class="p-snavi__menu__item"><a href="#">SNSアカウント一覧</a></li>
+					<li class="p-snavi__menu__item"><a href="#">お問い合わせ</a></li>
+					<li class="p-snavi__menu__item u-border--snavi--separator"><a href="#">サイトマップ</a></li>
+					<li class="p-snavi__menu__item"><a href="#">mujuWeb Store</a></li>
+					<li class="p-snavi__menu__item"><a href="#">企業情報</a></li>
+					<li class="p-snavi__menu__item"><a href="#">for tourist Japan</a></li>
+					<li class="p-snavi__menu__item u-border--snavi--separator"><a href="#">mujuスタディホール京都</a></li>
+					<li class="p-snavi__menu__item--sns">
+						<h2 class="p-snavi__menu__item--sns__ttl">Follow us</h2>
+						<ul class="c-snslist">
+							<li class="c-snslist__item"><a href="#"><i class="u-icon-twitter u-color--white"></i></a></li>
+							<li class="c-snslist__item"><a href="#"><i class="u-icon-facebook u-color--white"></i></a></li>
+							<li class="c-snslist__item"><a href="#"><i class="u-icon-instagram u-color--white"></i></a></li>
+							<li class="c-snslist__item"><a href="#"><i class="u-icon-line u-color--white"></i></a></li>
+							<li class="c-snslist__item"><a href="#"><i class="u-icon-youtube u-color--white"></i></a></li>
+							<li class="c-snslist__item"><a href="#"><i class="u-icon-google-plus u-color--white"></i></a></li>
+						</ul>
+						<div class="c-snslist__item__mail"><a href="#"><i class="u-icon-mail u-color--white"></i> メールマガジン登録</a></div>
+					</li>
+				</ul>
+			</nav>
+		</div>
 	</article>
 	<nav class="l-header__navi p-gnavi">
 		<ul class="p-gnavi__menu">
@@ -39,18 +104,461 @@
 	</nav>
 </header>
 
-<main>
-	<p>gulp-ejs 2.1アップデート！</p>
-	<p><img src="/images/leopard.jpg" alt="ヒョウ"></p>
-	<p>※CC0</p>
+<main id="main" class="l-main">
+	<article class="p-top--mainvisual">
+		<ul class="p-slider--mainvisual is-slider--mainvisual">
+			<li><img src="/images/top/mainvisual/img_01.jpg" alt=""></li>
+			<li><img src="/images/top/mainvisual/img_02.jpg" alt=""></li>
+			<li><img src="/images/top/mainvisual/img_03.jpg" alt=""></li>
+		</ul>
+	</article>
+	<div class="p-top--attention">
+		<p class="p-top--attention__item">パステルクール」パジャマの表面フラッシュ発生のおそれについてお詫びと回収のお知らせ</p>
+	</div>
+	<section id="section1" class="p-top--section">
+		<h2 class="p-top--section__ttl">Brands</h2>
+		<ul class="c-box--joinset">
+			<li>
+				<figure>
+					<img src="/images/top/brands/img_01.jpg" alt="Trefle">
+					<figcaption>Trefle</figcaption>
+				</figure>
+			</li>
+			<li>
+				<figure>
+					<img src="/images/top/brands/img_02.jpg" alt="INCARAT">
+					<figcaption>INCARAT</figcaption>
+				</figure>
+			</li>
+		</ul>
+		<ul class="c-box--joinset">
+			<li>
+				<figure>
+					<img src="/images/top/brands/img_03.jpg" alt="AMPHI">
+					<figcaption>AMPHI</figcaption>
+				</figure>
+			</li>
+			<li>
+				<figure>
+					<img src="/images/top/brands/img_04.jpg" alt="Lge">
+					<figcaption>Lge</figcaption>
+				</figure>
+			</li>
+		</ul>
+		<ul class="c-box--joinset">
+			<li>
+				<figure>
+					<img src="/images/top/brands/img_05.jpg" alt="Lesiage">
+					<figcaption>Lesiage</figcaption>
+				</figure>
+			</li>
+			<li>
+				<figure>
+					<img src="/images/top/brands/img_06.jpg" alt="Lesiage">
+					<figcaption>Lesiage</figcaption>
+				</figure>
+			</li>
+		</ul>
+		<a href="#" class="p-top--section__endbt c-button--border--circle--glay">すべてのブランド</a>
+	</section>
+	<section id="section2" class="p-top--section">
+		<h2 class="p-top--section__ttl">Recommend</h2>
+		<figure class="c-box--img-rtxt">
+			<img src="/images/top/recommend/img_01.jpg" alt="">
+			<figcaption>上流下着のつどい 092「おしゃれが香るパルミュージのお店」</figcaption>
+		</figure>
+		<figure class="c-box--img-rtxt">
+			<img src="/images/top/recommend/img_02.jpg" alt="">
+			<figcaption>30代からのカラダ・マナー入門」～Love Your Body～ </figcaption>
+		</figure>
+		<figure class="c-box--img-rtxt">
+			<img src="/images/top/recommend/img_03.jpg" alt="">
+			<figcaption>Palmyju Style(ミュージスタイル)　ブラの日＆サイズの日 </figcaption>
+		</figure>
+		<figure class="c-box--img-rtxt c-box--img-rtxt__end">
+			<img src="/images/top/recommend/img_04.jpg" alt="">
+			<figcaption>PALMYU BODY BOOK 特集18「なんとかしたい！ 肩こり」</figcaption>
+		</figure>
+		<a href="#" class="p-top--section__endbt c-button--border--circle--glay">すべて見る</a>
+	</section>
+	<section id="section-information" class="p-top--section--insert">
+		<h2 class="p-top--section--insert__ttl">Information</h2>
+		<div class="p-slider--insert__separator">
+			<ul class="p-top--information p-slider--insert is-slider--insert">
+				<li class="p-top--information__item p-slider--insert__box is-slider--information__item1">
+					<h3 class="p-top--information__item__ttl">ウイング[Wing]</h3>
+					<time class="p-top--information__item__time">2017.02.23</time>
+					<p class="p-top--information__item__txt">まるでヌードなつけごこち。キモチイイのにキレイにメイク。「ときはなつブラ　まるでヌードType」</p>
+				</li>
+				<li class="p-top--information__item p-slider--insert__box is-slider--information__item2">
+					<h3 class="p-top--information__item__ttl">ウイング[Wing]</h3>
+					<time class="p-top--information__item__time">2017.02.23</time>
+					<p class="p-top--information__item__txt">まるでヌードなつけごこち。キモチイイのにキレイにメイク。「ときはなつブラ　まるでヌードType」</p>
+				</li>
+				<li class="p-top--information__item p-slider--insert__box is-slider--information__item3">
+					<h3 class="p-top--information__item__ttl">ウイング[Wing]</h3>
+					<time class="p-top--information__item__time">2017.02.23</time>
+					<p class="p-top--information__item__txt">まるでヌードなつけごこち。キモチイイのにキレイにメイク。「ときはなつブラ　まるでヌードType」</p>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section id="section3" class="p-top--section">
+		<h2 class="p-top--section__ttl">Item Ranking</h2>
+		<dl class="p-top--ranking">
+			<dt class="p-top--ranking__ttl">ブラジャー</dt>
+			<dd class="p-top--ranking__data">
+				<ul class="p-top--ranking__data__detail is-slider--ranking">
+					<li class="p-top--ranking__data__item">
+						<figure>
+							<div class="p-top--ranking__data__item__img">
+								<img src="/images/common/ico/crown_01.png" alt="" class="p-top--ranking__data__item__img__mark" width="16">
+								<img src="/images/top/ranking/01/img_01.png" alt="">
+							</div>
+							<figcaption>
+								<p class="p-top--ranking__data__item__name">ミュージ</p>
+								<p class="p-top--ranking__data__item__price">&yen;5,076(税込)～</p>
+								<img src="/images/top/ranking/num1.png" alt="1" class="p-top--ranking__data__item__num" width="18">
+							</figcaption>
+						</figure>
+					</li>
+					<li class="p-top--ranking__data__item">
+						<figure>
+							<div class="p-top--ranking__data__item__img">
+								<img src="/images/common/ico/crown_02.png" alt="" class="p-top--ranking__data__item__img__mark" width="16">
+								<img src="/images/top/ranking/01/img_02.png" alt="">
+							</div>
+							<figcaption>
+								<p class="p-top--ranking__data__item__name">サルート</p>
+								<p class="p-top--ranking__data__item__price">&yen;8,532(税込)～</p>
+								<img src="/images/top/ranking/num2.png" alt="1" class="p-top--ranking__data__item__num" width="29">
+							</figcaption>
+						</figure>
+					</li>
+					<li class="p-top--ranking__data__item">
+						<figure>
+							<div class="p-top--ranking__data__item__img">
+								<img src="/images/common/ico/crown_03.png" alt="" class="p-top--ranking__data__item__img__mark" width="16">
+								<img src="/images/top/ranking/01/img_01.png" alt="">
+							</div>
+							<figcaption>
+								<p class="p-top--ranking__data__item__name">ミュージ</p>
+								<p class="p-top--ranking__data__item__price">&yen;5,076(税込)～</p>
+								<img src="/images/top/ranking/num3.png" alt="1" class="p-top--ranking__data__item__num" width="25">
+							</figcaption>
+						</figure>
+					</li>
+				</ul>
+			</dd>
+		</dl>
+		<dl class="p-top--ranking">
+			<dt class="p-top--ranking__ttl">ブラジャー</dt>
+			<dd class="p-top--ranking__data">
+				<ul class="p-top--ranking__data__detail is-slider--ranking">
+					<li class="p-top--ranking__data__item">
+						<figure>
+							<div class="p-top--ranking__data__item__img">
+								<img src="/images/common/ico/crown_01.png" alt="" class="p-top--ranking__data__item__img__mark" width="16">
+								<img src="/images/top/ranking/01/img_01.png" alt="">
+							</div>
+							<figcaption>
+								<p class="p-top--ranking__data__item__name">ミュージ</p>
+								<p class="p-top--ranking__data__item__price">&yen;5,076(税込)～</p>
+								<img src="/images/top/ranking/num1.png" alt="1" class="p-top--ranking__data__item__num" width="18">
+							</figcaption>
+						</figure>
+					</li>
+					<li class="p-top--ranking__data__item">
+						<figure>
+							<div class="p-top--ranking__data__item__img">
+								<img src="/images/common/ico/crown_02.png" alt="" class="p-top--ranking__data__item__img__mark" width="16">
+								<img src="/images/top/ranking/01/img_02.png" alt="">
+							</div>
+							<figcaption>
+								<p class="p-top--ranking__data__item__name">サルート</p>
+								<p class="p-top--ranking__data__item__price">&yen;8,532(税込)～</p>
+								<img src="/images/top/ranking/num2.png" alt="1" class="p-top--ranking__data__item__num" width="29">
+							</figcaption>
+						</figure>
+					</li>
+					<li class="p-top--ranking__data__item">
+						<figure>
+							<div class="p-top--ranking__data__item__img">
+								<img src="/images/common/ico/crown_03.png" alt="" class="p-top--ranking__data__item__img__mark" width="16">
+								<img src="/images/top/ranking/01/img_01.png" alt="">
+							</div>
+							<figcaption>
+								<p class="p-top--ranking__data__item__name">ミュージ</p>
+								<p class="p-top--ranking__data__item__price">&yen;5,076(税込)～</p>
+								<img src="/images/top/ranking/num3.png" alt="1" class="p-top--ranking__data__item__num" width="25">
+							</figcaption>
+						</figure>
+					</li>
+				</ul>
+			</dd>
+		</dl>
+		<dl class="p-top--ranking">
+			<dt class="p-top--ranking__ttl">ブラジャー</dt>
+			<dd class="p-top--ranking__data">
+				<ul class="p-top--ranking__data__detail is-slider--ranking">
+					<li class="p-top--ranking__data__item">
+						<figure>
+							<div class="p-top--ranking__data__item__img">
+								<img src="/images/common/ico/crown_01.png" alt="" class="p-top--ranking__data__item__img__mark" width="16">
+								<img src="/images/top/ranking/01/img_01.png" alt="">
+							</div>
+							<figcaption>
+								<p class="p-top--ranking__data__item__name">ミュージ</p>
+								<p class="p-top--ranking__data__item__price">&yen;5,076(税込)～</p>
+								<img src="/images/top/ranking/num1.png" alt="1" class="p-top--ranking__data__item__num" width="18">
+							</figcaption>
+						</figure>
+					</li>
+					<li class="p-top--ranking__data__item">
+						<figure>
+							<div class="p-top--ranking__data__item__img">
+								<img src="/images/common/ico/crown_02.png" alt="" class="p-top--ranking__data__item__img__mark" width="16">
+								<img src="/images/top/ranking/01/img_02.png" alt="">
+							</div>
+							<figcaption>
+								<p class="p-top--ranking__data__item__name">サルート</p>
+								<p class="p-top--ranking__data__item__price">&yen;8,532(税込)～</p>
+								<img src="/images/top/ranking/num2.png" alt="1" class="p-top--ranking__data__item__num" width="29">
+							</figcaption>
+						</figure>
+					</li>
+					<li class="p-top--ranking__data__item">
+						<figure>
+							<div class="p-top--ranking__data__item__img">
+								<img src="/images/common/ico/crown_03.png" alt="" class="p-top--ranking__data__item__img__mark" width="16">
+								<img src="/images/top/ranking/01/img_01.png" alt="">
+							</div>
+							<figcaption>
+								<p class="p-top--ranking__data__item__name">ミュージ</p>
+								<p class="p-top--ranking__data__item__price">&yen;5,076(税込)～</p>
+								<img src="/images/top/ranking/num3.png" alt="1" class="p-top--ranking__data__item__num" width="25">
+							</figcaption>
+						</figure>
+					</li>
+				</ul>
+			</dd>
+		</dl>
+		<a href="#" class="p-top--section__endbt c-button--border--circle--glay">すべての見る</a>
+	</section>
+	<div class="p-top--section c-box--imgcover"><a href=""><img src="/images/top/banner/present.png" alt="新作商品など素敵なアイテムが当たる
+プレゼント＆キャンペーンはこちら"></a></div>
+	<section id="section-pickup" class="p-top--section--insert">
+		<h2 class="p-top--section--pickup__ttl">Pickup Review</h2>
+		<div class="p-slider--insert__separator">
+			<ul class="p-top--pickup p-slider--insert is-slider--insert">
+				<li class="p-top--pickup__item p-slider--insert__box is-slider--pickup__item1">
+					<figure>
+						<img src="/images/top/pickup/img_01.png" alt="" class="p-top--pickup__item__img">
+						<figcaption>
+							<ul class="p-top--pickup__item__stars">
+								<li><img src="/images/common/ico/star_true.png" alt=""></li>
+								<li><img src="/images/common/ico/star_true.png" alt=""></li>
+								<li><img src="/images/common/ico/star_true.png" alt=""></li>
+								<li><img src="/images/common/ico/star_false.png" alt=""></li>
+								<li><img src="/images/common/ico/star_false.png" alt=""></li>
+							</ul>
+							<p class="p-top--pickup__item__txt">つけ心地最高（ルジェ[Lge] リボンブラ）</p>
+						</figcaption>
+					</figure>
+				</li>
+				<li class="p-top--pickup__item p-slider--insert__box is-slider--pickup__item2">
+					<figure>
+						<img src="/images/top/pickup/img_01.png" alt="" class="p-top--pickup__item__img">
+						<figcaption>
+							<ul class="p-top--pickup__item__stars">
+								<li><img src="/images/common/ico/star_true.png" alt=""></li>
+								<li><img src="/images/common/ico/star_true.png" alt=""></li>
+								<li><img src="/images/common/ico/star_true.png" alt=""></li>
+								<li><img src="/images/common/ico/star_false.png" alt=""></li>
+								<li><img src="/images/common/ico/star_false.png" alt=""></li>
+							</ul>
+							<p class="p-top--pickup__item__txt">つけ心地最高（ルジェ[Lge] リボンブラ）</p>
+						</figcaption>
+					</figure>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section id="section4" class="p-top--section">
+		<h2 class="p-top--section__ttl">How to</h2>
+		<ul class="c-box--joinset">
+			<li>
+				<figure>
+					<img src="/images/top/howto/img_01.jpg" alt="">
+					<figcaption>快適に下着を身につけるために知っておきたい基礎知識</figcaption>
+				</figure>
+			</li>
+			<li>
+				<figure>
+					<img src="/images/top/howto/img_02.jpg" alt="WACOAL BODY BOOK">
+					<figcaption>かしこくキレイなからだをつくろう</figcaption>
+				</figure>
+			</li>
+		</ul>
+		<ul class="c-box--joinset">
+			<li>
+				<figure>
+					<img src="/images/top/howto/img_03.jpg" alt="">
+					<figcaption>さあ、自分のブラを見直そう。</figcaption>
+				</figure>
+			</li>
+			<li>
+				<figure>
+					<img src="/images/top/howto/img_04.jpg" alt="WACOAL BODY BOOK">
+					<figcaption>サイズを入力してボディバランス診断☆</figcaption>
+				</figure>
+			</li>
+		</ul>
+		<a href="#" class="p-top--section__endbt c-button--border--circle--glay">すべて見る</a>
+	</section>
+	<section id="section5" class="p-top--section u-mb60">
+		<h2 class="p-top--section__ttl--center"><i class="icon-instagram"></i></h2>
+		<ul class="c-box--tile">
+			<li class="c-box--tile__item"><img src="/images/top/imstagram/img_01.jpg" alt=""></li><!--
+			--><li class="c-box--tile__item"><img src="/images/top/imstagram/img_01.jpg" alt=""></li><!--
+			--><li class="c-box--tile__item"><img src="/images/top/imstagram/img_01.jpg" alt=""></li><!--
+			--><li class="c-box--tile__item"><img src="/images/top/imstagram/img_01.jpg" alt=""></li><!--
+			--><li class="c-box--tile__item"><img src="/images/top/imstagram/img_01.jpg" alt=""></li><!--
+			--><li class="c-box--tile__item"><img src="/images/top/imstagram/img_01.jpg" alt=""></li><!--
+			--><li class="c-box--tile__item"><img src="/images/top/imstagram/img_01.jpg" alt=""></li><!--
+			--><li class="c-box--tile__item"><img src="/images/top/imstagram/img_01.jpg" alt=""></li>
+		</ul>
+	</section>
+	<div class="p-top--section p-top--regist u-mb60">
+		<ul class="p-top--regist__set u-mb35">
+			<li class="p-top--regist__set__l"><img src="/images/top/regist/logo.jpg" alt="logo" class="p-top--regist__set__logo"></li>
+			<li class="p-top--regist__set__r"><img src="/images/top/regist/txt.png" alt="ミュージメンバーになってもっと便利に、もっと楽しく♪" class="p-top--regist__set__txt"></li>
+		</ul>
+		<ul class="p-top--regist__set">
+			<li class="c-button--circle--maincolor u-mr25">新規登録</li>
+			<li class="c-button--circle--maincolor">ログイン</li>
+		</ul>
+	</div>
 
+	<section id="section6" class="p-top--section u-mb60">
+		<h2 class="p-top--section__ttl">Keywords</h2>
+		<ul class="c-tagcloud">
+			<li class="c-tagcloud__item"><a href="#" class="c-button--border--tagcloud">リボンブラ</a></li>
+			<li class="c-tagcloud__item"><a href="#" class="c-button--border--tagcloud">ナイトブラ</a></li>
+			<li class="c-tagcloud__item"><a href="#" class="c-button--border--tagcloud">ノンワイヤー</a></li>
+			<li class="c-tagcloud__item"><a href="#" class="c-button--border--tagcloud">パジャマ</a></li>
+			<li class="c-tagcloud__item"><a href="#" class="c-button--border--tagcloud">サルート</a></li>
+			<li class="c-tagcloud__item"><a href="#" class="c-button--border--tagcloud">サルート</a></li>
+			<li class="c-tagcloud__item"><a href="#" class="c-button--border--tagcloud">ガードル</a></li>
+			<li class="c-tagcloud__item"><a href="#" class="c-button--border--tagcloud">マタニティ</a></li>
+			<li class="c-tagcloud__item"><a href="#" class="c-button--border--tagcloud">アンフィ</a></li>
+			<li class="c-tagcloud__item"><a href="#" class="c-button--border--tagcloud">メンズ</a></li>
+		</ul>
+	</section>
+	<aside id="aside-section" class="p-site-aside">
+		<section class="p-site-aside__section1">
+			<h2 class="p-site-aside__section1__ttl">重要なお知らせ</h2>
+			<dl class="c-box--dataset">
+				<dt class="c-box--dataset__date">2016年12月5日</dt>
+				<dd class="c-box--dataset__txt"><a href="#">「ミュージ」デザインショーツ　組成表示の間違いについてお詫びと回収のお知らせ</a></dd>
+				<dt class="c-box--dataset__date">2016年12月5日</dt>
+				<dd class="c-box--dataset__txt"><a href="#">「ミュージ」デザインショーツ　組成表示の間違いについてお詫びと回収のお知らせ</a></dd>
+				<dt class="c-box--dataset__date">2016年12月5日</dt>
+				<dd class="c-box--dataset__txt"><a href="#">「ミュージ」デザインショーツ　組成表示の間違いについてお詫びと回収のお知らせ</a></dd>
+			</dl>
+			<a href="#" class="p-top--section__endbt c-button--border--circle--glay">すべて見る</a>
+		</section>
+		<section class="p-site-aside__section2">
+			<h2 class="p-site-aside__section2__ttl">Follow us</h2>
+			<ul class="c-snslist">
+				<li class="c-snslist__item"><a href="#"><i class="u-icon-twitter"></i></a></li>
+				<li class="c-snslist__item"><a href="#"><i class="u-icon-facebook"></i></a></li>
+				<li class="c-snslist__item"><a href="#"><i class="u-icon-instagram"></i></a></li>
+				<li class="c-snslist__item"><a href="#"><i class="u-icon-line"></i></a></li>
+				<li class="c-snslist__item"><a href="#"><i class="u-icon-youtube"></i></a></li>
+				<li class="c-snslist__item"><a href="#"><i class="u-icon-google-plus"></i></a></li>
+			</ul>
+			<div class="c-snslist__item__mail"><a href=""><i class="u-icon-mail"></i> メールマガジン登録</a></div>
+			<a href="#" class="p-top--section__endbt c-button--border--circle--glay">すべて見る</a>
+		</section>
+		<article class="p-site-aside__section3">
+			<ul class="p-site-aside__section3__list">
+				<li class="p-site-aside__section3__list__item"><a href="#"><i class="u-icon--triangle"></i>サイト内検索</a></li>
+				<li class="p-site-aside__section3__list__item"><a href="#"><i class="u-icon--triangle"></i>ログイン・新規登録</a></li>
+				<li class="p-site-aside__section3__list__item"><a href="#"><i class="u-icon--triangle"></i>店舗を探す</a></li>
+			</ul>
+			<ul class="p-site-aside__section3__list">
+				<li class="p-site-aside__section3__list__item--sp"><a href="#"><i class="u-icon--triangle"></i>下着を探す</a></li>
+				<li class="p-site-aside__section3__list__item"><a href="#"><i class="u-icon--triangle"></i>ランキング</a></li>
+				<li class="p-site-aside__section3__list__item"><a href="#"><i class="u-icon--triangle"></i>ピックアップ</a></li>
+				<li class="p-site-aside__section3__list__item"><a href="#"><i class="u-icon--triangle"></i>新着アイテム</a></li>
+				<li class="p-site-aside__section3__list__item"><a href="#"><i class="u-icon--triangle"></i>レビュー一覧</a></li>
+			</ul>
+			<ul class="p-site-aside__section3__list">
+				<li class="p-site-aside__section3__list__item--ttl">カテゴリ</li>
+				<li class="p-site-aside__section3__list__item"><a href="#"><i class="u-icon--triangle"></i>ブラジャー</a></li>
+				<li class="p-site-aside__section3__list__item"><a href="#"><i class="u-icon--triangle"></i>ショーツ</a></li>
+				<li class="p-site-aside__section3__list__item"><a href="#"><i class="u-icon--triangle"></i>ルームウェア</a></li>
+				<li class="p-site-aside__section3__list__item"><a href="#"><i class="u-icon--triangle"></i>スポーツ</a></li>
+				<li class="p-site-aside__section3__list__item"><a href="#"><i class="u-icon--triangle"></i>メンズ</a></li>
+				<li class="p-site-aside__section3__list__item"><a href="#"><i class="u-icon--triangle"></i>マタニティ</a></li>
+				<li class="p-site-aside__section3__list__item"><a href="#"><i class="u-icon--triangle"></i>ジュニア</a></li>
+				<li class="p-site-aside__section3__list__item"><a href="#"><i class="u-icon--triangle"></i>ブライダル</a></li>
+			</ul>
+			<ul class="p-site-aside__section3__list">
+				<li class="p-site-aside__section3__list__item--sp"><a href="#"><i class="u-icon--triangle"></i>How to&amp;読み物（下着を楽しむ）</a></li>
+				<li class="p-site-aside__section3__list__item"><a href="#"><i class="u-icon--triangle"></i>下着の基礎知識</a></li>
+				<li class="p-site-aside__section3__list__item"><a href="#"><i class="u-icon--triangle"></i>ミュージボディブック</a></li>
+				<li class="p-site-aside__section3__list__item"><a href="#"><i class="u-icon--triangle"></i>ブラチェック</a></li>
+				<li class="p-site-aside__section3__list__item"><a href="#"><i class="u-icon--triangle"></i>フィットナビ</a></li>
+				<li class="p-site-aside__section3__list__item"><a href="#"><i class="u-icon--triangle"></i>みんなの下着ホンネブラパン</a></li>
+				<li class="p-site-aside__section3__list__item"><a href="#"><i class="u-icon--triangle"></i>ガールズばでなび</a></li>
+				<li class="p-site-aside__section3__list__item"><a href="#"><i class="u-icon--triangle"></i>ブラ・リサイクル</a></li>
+				<li class="p-site-aside__section3__list__item"><a href="#"><i class="u-icon--triangle"></i>ピンクリボン活動</a></li>
+				<li class="p-site-aside__section3__list__item"><a href="#"><i class="u-icon--triangle"></i>ミュージスタイル</a></li>
+			</ul>
+			<ul class="p-site-aside__section3__list">
+				<li class="p-site-aside__section3__list__item--w100"><a href="#"><i class="u-icon--triangle"></i>旬のおすすめ</a></li>
+				<li class="p-site-aside__section3__list__item--w100"><a href="#"><i class="u-icon--triangle"></i>キャンペーン＆プレゼント</a></li>
+				<li class="p-site-aside__section3__list__item--w100"><a href="#"><i class="u-icon--triangle"></i>ニュース＆トピックス</a></li>
+				<li class="p-site-aside__section3__list__item--w100"><a href="#"><i class="u-icon--triangle"></i>SNSアカウント一覧</a></li>
+				<li class="p-site-aside__section3__list__item--w100"><a href="#"><i class="u-icon--triangle"></i>お問い合わせ</a></li>
+				<li class="p-site-aside__section3__list__item--w100"><a href="#"><i class="u-icon--triangle"></i>ニュース＆トピックス</a></li>
+				<li class="p-site-aside__section3__list__item--w100"><a href="#"><i class="u-icon--triangle"></i>サイトマップ</a></li>
+			</ul>
+		</article>
+	</aside>
 </main>
 
-<footer>
+<footer class="l-footer">
+	<article class="l-footer__main">
+		<nav class="p-relatednavi">
+			<ul class="p-relatednavi__menu">
+				<li class="p-relatednavi__menu__item"><a href="#" class="c-button--border" target="_blank">myuji Web Store</a></li>
+				<li class="p-relatednavi__menu__item"><a href="#" class="c-button--border" target="_blank">企業情報</a></li>
+				<li class="p-relatednavi__menu__item"><a href="#" class="c-button--border" target="_blank">myuji STUDY HALL</a></li>
+			</ul>
+		</nav>
+		<nav class="p-fnavi">
+			<ul class="p-fnavi__menu">
+				<li class="p-fnavi__menu__item"><a href="#">PCサイト</a></li>
+				<li class="p-fnavi__menu__item"><a href="#">お客様窓口</a></li>
+				<li class="p-fnavi__menu__item"><a href="#">個人情報保護方針</a></li>
+				<li class="p-fnavi__menu__item"><a href="#">お願いとご注意</a></li>
+				<li class="p-fnavi__menu__item"><a href="#">サイトマップ</a></li>
+			</ul>
+		</nav>
+	</article>
+	<article class="l-footer__end">
+		<small class="l-footer__end__copy">&copy; myuji Corp. All Rights Reserved.</small>
+	</article>
 </footer>
 
 <!-- build:js /js/lib.js -->
 <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="/js/slick/slick.js"></script>
+<script src="/js/hamburger/hamburger.js"></script>
+<script src="/js/config.js"></script>
 <!-- endbuild -->
 </body>
 </html>

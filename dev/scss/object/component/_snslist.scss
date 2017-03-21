@@ -1,0 +1,69 @@
+.c-snslist {
+	margin-bottom: 37px;
+	display: flex;
+	justify-content: space-between;
+	&__item {
+		display: inline;
+		a {
+			width: 40px;
+			height: 40px;
+			text-decoration: none;
+			color: #555;
+			display: inline-block;
+			i {
+				&::before {
+					font-size: 4.0rem;
+					display: block;
+				}
+			}
+		}
+		&__mail {
+			margin-bottom: 45px;
+			text-align: center;
+			a {
+				text-decoration: none;
+				vertical-align: middle;
+				color: #555;
+				position: relative;
+				i {
+					margin-right: 13px;
+					vertical-align: middle;
+					top: -3px;
+					position: relative;
+					&::before {
+						font-size: 2.0rem;
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}
+}//.c-snslist
+.p-snavi {
+	.c-snslist {
+		@extend .c-snslist;
+		margin-bottom: 35px;
+		padding: 0;
+		&__item {
+			a {
+				width: 35px;
+				height: 35px;
+				i {
+					&::before {
+						font-size: 3.0rem;
+					}
+				}
+			}
+			&__mail {
+				margin-bottom: 40px;
+				text-align: left;
+				a {
+					color: #fff;
+					text-decoration: none;
+					i {
+					}
+				}
+			}
+		}
+	}
+}

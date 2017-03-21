@@ -2,3 +2,13 @@
 	content: "";
 	display: block;
 }
+
+@mixin clearfix {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+@mixin opacity( $opacity:0.7, $color01:#000 ) {
+	background-color: rgba( $color01, $opacity );
+}

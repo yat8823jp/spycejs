@@ -1,0 +1,22 @@
+.c-tagcloud {
+	text-align: left;
+	margin: 0;
+	padding: 0 15px;
+	&::after {
+		@include clearfix;
+	}
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	&__item {
+		margin: 0 7px 6px 0;
+		white-space: nowrap;
+		display: block;
+		// float: left;
+		a {
+			margin-left: 0;
+			font-size: 1.8rem;
+			white-space: nowrap;
+		}
+	}
+}

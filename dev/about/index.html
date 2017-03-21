@@ -12,23 +12,88 @@
 
 	<!-- build:css /css/common.css -->
 	<link rel="stylesheet" href="/node_modules/sanitize.css/sanitize.css">
+	<link rel="stylesheet" href="/js/slick/slick.css">
+	<link rel="stylesheet" href="/js/slick/slick-theme.css">
 	<link rel="stylesheet" href="/css/common.css">
 	<!-- endbuild -->
 </head>
-<body>
-<header class="l-header">
+<body id="pagetop">
+<header class="l-header is-header">
 	<article class="l-header__main">
-		<h1 class="l-header__main__logo"><img src="/images/common/header/logo.png" alt="logo" width="42"></h1>
-		<a class="l-header__main__smenubt c-buttom--smenu" href="#">Menu</a>
-		<nav class="p-snavi">
-			<ul class="p-snavi__menu__lv1">
-				<li class="p-snavi__menu__lv1__item1">
-					<ul class="p-snavi__menu__lv2">
-						<li class="p-snavi__menu__lv2__item1"></li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
+		<h1 class="l-header__main__logo"><a href="/"><img src="/images/common/header/logo.png" alt="logo"></a></h1>
+		<a class="l-header__main__smenubt c-buttom--smenu is-hamburger__bt" href="#">Menu</a>
+		<div class="c-hamburger__bg is-hamburger__bg">
+			<nav class="p-snavi is-hamburger__menu">
+				<ul class="p-snavi__menu">
+					<li class="p-snavi__menu__item--close"><a href="#" class="c-button--close is-close__bt"></a></li>
+					<li class="p-snavi__menu__item--search">
+						<div class="p-snavi__menu__item--search__ttl"><i class="u-icon--search"></i><span>サイト内検索</span></div>
+						<div class="p-snavi__menu__item--search__box"><input type="search" name="sitesarch"></div>
+					</li>
+					<li class="p-snavi__menu__item--regist"><a href="#"><i class="u-icon--key"></i><span>ログイン・新規登録</span></a></li>
+					<li class="p-snavi__menu__item--shop u-border--snavi--separator"><a href="#"><i class="u-icon--shop"></i><span>店舗検索</span></a></li>
+					<li class="p-snavi__menu__item u-mt8"><a href="#">ブランド一覧</a></li>
+					<li class="p-snavi__menu__item"><a href="#" class="p-snavi__menu__item__bt">下着を探す<i class="u-arrow--bottom"></i></a></li>
+					<li class="p-snavi__menu__lv2 is-close">
+						<ul class="p-snavi__menu__lv2__list">
+							<li class="p-snavi__menu__item"><a href="#">ランキング</a></li>
+							<li class="p-snavi__menu__item"><a href="#">ピックアップ</a></li>
+							<li class="p-snavi__menu__item"><a href="#">新着コンテンツ</a></li>
+							<li class="p-snavi__menu__item"><a href="#">レビュー一覧</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">ブラジャー</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">ショーツ</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">ルームウェア</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">スポーツ</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">メンズ</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">マタニティ</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">ジュニア</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">ブライダル</a></li>
+							<li class="p-snavi__menu__item"><a href="#">+ 別のアイテムを探す</a></li>
+						</ul>
+					</li>
+					<li class="p-snavi__menu__item"><a href="#" class="p-snavi__menu__item__bt">How to＆読み物<i class="u-arrow--bottom"></i></a></li>
+					<li class="p-snavi__menu__lv2 is-close">
+						<ul class="p-snavi__menu__lv2__list">
+							<li class="p-snavi__menu__item"><a href="#">ランキング</a></li>
+							<li class="p-snavi__menu__item"><a href="#">ピックアップ</a></li>
+							<li class="p-snavi__menu__item"><a href="#">新着コンテンツ</a></li>
+							<li class="p-snavi__menu__item"><a href="#">レビュー一覧</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">ブラジャー</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">ショーツ</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">ルームウェア</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">スポーツ</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">メンズ</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">マタニティ</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">ジュニア</a></li>
+							<li class="p-snavi__menu__item--w50"><a href="#">ブライダル</a></li>
+							<li class="p-snavi__menu__item"><a href="#">+ 別のアイテムを探す</a></li>
+						</ul>
+					</li>
+					<li class="p-snavi__menu__item"><a href="#">旬のおすすめ</a></li>
+					<li class="p-snavi__menu__item"><a href="#">キャンペーン＆プレゼント</a></li>
+					<li class="p-snavi__menu__item"><a href="#">ニュース＆トピックス</a></li>
+					<li class="p-snavi__menu__item"><a href="#">SNSアカウント一覧</a></li>
+					<li class="p-snavi__menu__item"><a href="#">お問い合わせ</a></li>
+					<li class="p-snavi__menu__item u-border--snavi--separator"><a href="#">サイトマップ</a></li>
+					<li class="p-snavi__menu__item"><a href="#">mujuWeb Store</a></li>
+					<li class="p-snavi__menu__item"><a href="#">企業情報</a></li>
+					<li class="p-snavi__menu__item"><a href="#">for tourist Japan</a></li>
+					<li class="p-snavi__menu__item u-border--snavi--separator"><a href="#">mujuスタディホール京都</a></li>
+					<li class="p-snavi__menu__item--sns">
+						<h2 class="p-snavi__menu__item--sns__ttl">Follow us</h2>
+						<ul class="c-snslist">
+							<li class="c-snslist__item"><a href="#"><i class="u-icon-twitter u-color--white"></i></a></li>
+							<li class="c-snslist__item"><a href="#"><i class="u-icon-facebook u-color--white"></i></a></li>
+							<li class="c-snslist__item"><a href="#"><i class="u-icon-instagram u-color--white"></i></a></li>
+							<li class="c-snslist__item"><a href="#"><i class="u-icon-line u-color--white"></i></a></li>
+							<li class="c-snslist__item"><a href="#"><i class="u-icon-youtube u-color--white"></i></a></li>
+							<li class="c-snslist__item"><a href="#"><i class="u-icon-google-plus u-color--white"></i></a></li>
+						</ul>
+						<div class="c-snslist__item__mail"><a href="#"><i class="u-icon-mail u-color--white"></i> メールマガジン登録</a></div>
+					</li>
+				</ul>
+			</nav>
+		</div>
 	</article>
 	<nav class="l-header__navi p-gnavi">
 		<ul class="p-gnavi__menu">
@@ -47,11 +112,35 @@
 
 </main>
 
-<footer>
+<footer class="l-footer">
+	<article class="l-footer__main">
+		<nav class="p-relatednavi">
+			<ul class="p-relatednavi__menu">
+				<li class="p-relatednavi__menu__item"><a href="#" class="c-button--border" target="_blank">myuji Web Store</a></li>
+				<li class="p-relatednavi__menu__item"><a href="#" class="c-button--border" target="_blank">企業情報</a></li>
+				<li class="p-relatednavi__menu__item"><a href="#" class="c-button--border" target="_blank">myuji STUDY HALL</a></li>
+			</ul>
+		</nav>
+		<nav class="p-fnavi">
+			<ul class="p-fnavi__menu">
+				<li class="p-fnavi__menu__item"><a href="#">PCサイト</a></li>
+				<li class="p-fnavi__menu__item"><a href="#">お客様窓口</a></li>
+				<li class="p-fnavi__menu__item"><a href="#">個人情報保護方針</a></li>
+				<li class="p-fnavi__menu__item"><a href="#">お願いとご注意</a></li>
+				<li class="p-fnavi__menu__item"><a href="#">サイトマップ</a></li>
+			</ul>
+		</nav>
+	</article>
+	<article class="l-footer__end">
+		<small class="l-footer__end__copy">&copy; myuji Corp. All Rights Reserved.</small>
+	</article>
 </footer>
 
 <!-- build:js /js/lib.js -->
 <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="/js/slick/slick.js"></script>
+<script src="/js/hamburger/hamburger.js"></script>
+<script src="/js/config.js"></script>
 <!-- endbuild -->
 </body>
 </html>

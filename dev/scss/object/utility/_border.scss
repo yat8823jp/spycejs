@@ -1,0 +1,12 @@
+.u-border {
+	&--glay {
+		border-color: #555;
+	}
+	&--snavi--separator {
+		&::after {
+			content: "";
+			border-bottom: 8px solid $color--main--dark;
+			display: block;
+		}
+	}
+}

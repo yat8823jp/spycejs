@@ -1,0 +1,21 @@
+.p-slider {
+	&--mainvisual {
+
+	}
+	&--insert {
+		&__separator {
+			width: 90%;
+			margin: auto;
+		}
+		&__box {
+			width: 345px;
+			margin: auto;
+			padding: 50px 15px 25px;
+			background: #fff;
+			border-radius: 4px;
+			position: relative;
+			display: block;
+			overflow: hidden;
+		}
+	}
+}

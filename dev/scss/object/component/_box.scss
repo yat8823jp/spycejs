@@ -1,0 +1,65 @@
+.c-box {
+	&--joinset {
+		display: flex;
+		flex-wrap: nowrap;
+		margin-bottom: 40px;
+		img {
+			margin-bottom: 14px;
+		}
+		figcaption {
+			margin-left: 15px;
+		}
+	}
+	&--img-rtxt {
+		border-top: 1px solid #eee;
+		display: flex;
+		align-items: center;
+		flex-wrap: nowrap;
+		&__end {
+			border-bottom: 1px solid #eee;
+		}
+		img {
+			width: 30%;
+		}
+		figcaption {
+			padding: 14px;
+			font-size: 1.4rem;
+		}
+	}
+	&--cover {
+		img {
+			width: 100%;
+		}
+	}
+	&--tile {
+		&__item {
+			width: calc( 100vw / 3 );
+			display: inline;
+			img {
+				width: calc( 100vw / 3 );
+				margin: 0;
+				padding: 0;
+			}
+		}
+	}
+	&--dataset {
+		&__date {
+			margin-bottom: 10px;
+			padding: 0;
+			font-size: 1.2rem;
+			color: #999;
+		}
+		&__txt {
+			padding: 0 0 10px;
+			margin: 0 0 30px;
+			border-bottom: 2px solid #d9d9d9;
+			a {
+				color: #444;
+				text-decoration: none;
+				font-size: 1.4rem;
+				line-height: 1.6;
+			}
+		}
+
+	}
+}

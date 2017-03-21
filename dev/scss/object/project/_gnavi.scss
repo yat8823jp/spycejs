@@ -1,0 +1,19 @@
+.p-gnavi {
+	width: 100%;
+	background: $color--main;
+	&__menu {
+		height: 35px;
+		display: flex;
+		flex-flow: nowrap;
+		align-items: center;
+		justify-content: space-around;
+		&__item {
+			a {
+				font-size: 1.3rem;
+				color: #fff;
+				text-decoration: none;
+			}
+
+		}
+	}
+}

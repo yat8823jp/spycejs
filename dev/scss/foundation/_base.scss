@@ -1,12 +1,24 @@
+@import url('//fonts.googleapis.com/css?family=Noto+Sans|Raleway');
+
 :root {
 	font-size: 10px;
 }
 
 body {
 	font-size: 1.4rem;
+	font-family: sans-serif;
 }
 
 img {
 	max-width: 100%;
 	height: auto;
+}
+
+article {
+	display: block;
+}
+
+ul, li {
+	margin: 0;
+	padding: 0;
 }

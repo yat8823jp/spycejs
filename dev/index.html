@@ -2,12 +2,12 @@
 <html lang="ja">
 <head>
 	<meta charset="UTF-8">
-	<title>トップページABC</title>
+	<title>トップページA</title>
 
-	<meta name="description" content="トップページ用のメタディスクリプションあああ">
+	<meta name="description" content="トップページ用のメタディスクリプション">
 	<meta name="keywords" content="キーワード, カンマ">
 
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, user-scalable=0">
 	<meta name="format-detection" content="telephone=no">
 
 	<!-- build:css /css/common.css -->
@@ -16,9 +16,29 @@
 	<!-- endbuild -->
 </head>
 <body>
-<header>
-
+<header class="l-header">
+	<article class="l-header__main">
+		<h1 class="l-header__main__logo"><img src="/images/common/header/logo.png" alt="logo" width="42"></h1>
+		<a class="l-header__main__smenubt c-buttom--smenu" href="#">Menu</a>
+		<nav class="p-snavi">
+			<ul class="p-snavi__menu__lv1">
+				<li class="p-snavi__menu__lv1__item1">
+					<ul class="p-snavi__menu__lv2">
+						<li class="p-snavi__menu__lv2__item1"></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</article>
+	<nav class="l-header__navi p-gnavi">
+		<ul class="p-gnavi__menu">
+			<li class="p-gnavi__menu__item"><a href="#">My Claren</a></li>
+			<li class="p-gnavi__menu__item"><a href="#">Brands</a></li>
+			<li class="p-gnavi__menu__item"><a href="#">Shop list</a></li>
+		</ul>
+	</nav>
 </header>
+
 <main>
 	<p>gulp-ejs 2.1アップデート！</p>
 	<p><img src="/images/leopard.jpg" alt="ヒョウ"></p>

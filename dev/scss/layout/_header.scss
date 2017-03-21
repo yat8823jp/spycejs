@@ -1,0 +1,26 @@
+.l-header {
+	&__main {
+		width: 100%;
+		border-top: 15px solid $color--main;
+		text-align: center;
+		position: relative;
+		&__logo {
+			img {
+
+			}
+		}
+		&__smenubt {
+			margin-top: 4px;
+			top: 50%;
+			right: ( 30/2 )+px;
+			font-family: 'Raleway';
+			font-size: 1.6rem;
+			color: #000;
+			text-decoration: none;
+			position: absolute;
+		}
+	}//&__main
+	&__navi {
+		position: relative;
+	}
+}

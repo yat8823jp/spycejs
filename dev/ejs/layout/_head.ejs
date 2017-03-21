@@ -5,7 +5,7 @@
 <% if( typeof title !== 'undefined' ) { -%>
 	<title><%= title %></title>
 <% } else { -%>
-	<title>ページに title を入れなかった時のtitle要素</title>
+	<title></title>
 <% } -%>
 <% if( typeof metadescription !== 'undefined' ) { %>
 	<meta name="description" content="<%= metadescription %>">
@@ -14,7 +14,7 @@
 	<meta name="keywords" content="<%= metakeywords %>">
 <% } -%>
 
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, user-scalable=0">
 	<meta name="format-detection" content="telephone=no">
 
 	<!-- build:css /css/common.css -->

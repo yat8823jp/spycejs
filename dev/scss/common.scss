@@ -2,6 +2,8 @@
 // Foundation
 // ==========================================================================
 @import "foundation/_base";
+@import "foundation/_variable";
+@import "foundation/_mixin";
 
 // ==========================================================================
 // Layout
@@ -21,6 +23,8 @@
 // Project
 // -----------------------------------------------------------------
 @import "object/project/_articles";
+@import "object/project/_gnavi";
+@import "object/project/_snavi";
 
 // -----------------------------------------------------------------
 // Utility

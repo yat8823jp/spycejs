@@ -16,6 +16,19 @@ jQuery( function( $ ) {
 		arrows: false
 	} );
 
+	//ドロワーメニュー 開閉
+	$( '.p-snavi__menu__item__bt' ).click( function() {
+		if( $( this ).children().hasClass( 'u-arrow--top' ) ) {
+			$( this ).children( '.u-arrow--top' ).addClass( 'u-arrow--bottom' );
+			$( this ).children( '.u-arrow--top' ).removeClass( 'u-arrow--top' );
+		} else if( $( this ).children().hasClass( 'u-arrow--bottom' ) ) {
+			$( this ).children( '.u-arrow--bottom' ).addClass( 'u-arrow--top' );
+			$( this ).children( '.u-arrow--bottom' ).removeClass( 'u-arrow--bottom' );
+		}
+		$( this ).parent().next( '.is-close' ).slideToggle();
+	} );
+
+	//トップ固定
 	$( window ).scroll( function() {
 		if( $( window ).scrollTop() > 50 ) {
 	  		$( '.l-header' ).addClass( 'fixed' );

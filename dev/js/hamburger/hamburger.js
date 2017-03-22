@@ -17,17 +17,28 @@ jQuery( function( $ ) {
 		$( this ).toggleClass( 'is-hamburger--active' );
 		$( '.is-hamburger__bg' ).toggleClass( 'is-hamburger--active' );
 		$( '.is-hamburger__menu' ).toggleClass( 'is-hamburger--active' );
-		return false;
 	} );
 	$( '.is-close__bt' ).click( function( e ) {
-		e.stopPropagation();
+		e.stopPropagation( e );
 		bodyCss();
 		$( 'html, body' ).prop( { scrollTop: current_scrollY } );
 		$( '.is-hamburger__bt' ).toggleClass( 'is-hamburger--active' );
 		$( '.is-hamburger__menu' ).toggleClass( 'is-hamburger--active' );
 		$( '.is-hamburger__bg' ).toggleClass( 'is-hamburger--active' );
 		$('.scrollbar').hide();
-		return false;
+	} );
+	$( '.is-hamburger__menu' ).click( function() {
+		event.stopPropagation();
+	} );
+	$( '.is-hamburger__bg' ).click( function( e ) {
+		e.stopPropagation( e );
+		bodyCss();
+		$( 'html, body' ).prop( { scrollTop: current_scrollY } );
+		$( '.is-hamburger__bt' ).toggleClass( 'is-hamburger--active' );
+		$( '.is-hamburger__menu' ).toggleClass( 'is-hamburger--active' );
+		$( '.is-hamburger__bg' ).toggleClass( 'is-hamburger--active' );
+		$('.scrollbar').hide();
+		event.preventDefault();
 	} );
 	function bodyCss() {
 		$( 'body' ).css( {

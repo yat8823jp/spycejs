@@ -15,7 +15,7 @@
 		right: -100%;
 		position: fixed;
 		transition: all 0.3s;
-		z-index: 9;
+		z-index: 1;
 		&.is-hamburger--active {
 			right: 0;
 			visibility: visible;

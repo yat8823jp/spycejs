@@ -9,6 +9,10 @@
 		figcaption {
 			margin-left: 15px;
 		}
+		a {
+			text-decoration: none;
+			color: #444;
+		}
 	}
 	&--img-rtxt {
 		border-top: 1px solid #eee;
@@ -52,7 +56,7 @@
 		&__txt {
 			padding: 0 0 10px;
 			margin: 0 0 30px;
-			border-bottom: 2px solid #d9d9d9;
+			border-bottom: 1px solid #d9d9d9;
 			a {
 				color: #444;
 				text-decoration: none;

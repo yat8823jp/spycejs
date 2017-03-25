@@ -24,6 +24,7 @@
 			}
 			&:first-child {
 				width: 45%;
+				text-align: right;
 				margin-left: 0;
 			}
 			&:nth-child( 2 ) {
@@ -31,13 +32,11 @@
 				&::after {
 					content: "";
 				}
-				// flex-wrap: wrap;
 			}
 			&:nth-child( 3 ) {
-				// flex-wrap: wrap;
+				margin-left: 0;
 			}
 			&:nth-child( 4 ) {
-				// flex-wrap: wrap;
 			}
 			&:last-child {
 				&::after {
@@ -47,107 +46,4 @@
 			}
 		}
 	}
-	// &__menu {
-	// 	display: flex;
-	// 	justify-content: center;
-	// 	flex-wrap: wrap;
-	// 	&__item {
-	// 		margin-left: 10px;
-	// 		font-size: 1.2rem;
-	// 		line-height: 2.0;
-	// 		&::after {
-	// 			content: "|";
-	// 			padding-left: 10px;
-	// 			display: inline-block;
-	// 			color: #ccc;
-	// 		}
-	// 		a {
-	// 			color: #ccc;
-	// 			text-decoration: none;
-	// 		}
-	// 		&:first-child {
-	// 			margin-left: 0;
-	// 		}
-	// 		&:nth-child( 2 ) {
-	// 			// flex-wrap: wrap;
-	// 		}
-	// 		&:last-child {
-	// 			&::after {
-	// 				content: "";
-	// 				padding-left: 0;
-	// 			}
-	// 		}
-	// 	}
-	// }
-	// &__menu {
-	// 	text-align: center;
-	// 	position: relative;
-	// 	left: 50%;
-	// 	&__item {
-	// 		width: 33%;
-	// 		padding-left: 10px;
-	// 		box-sizing: border-box;
-	// 		font-size: 1.2rem;
-	// 		// text-align: center;
-	// 		white-space: nowrap;
-	// 		float: left;
-	// 		left: -50%;
-	// 		position: relative;
-	// 		&:first-child {
-	// 			width: 50%;
-	// 			padding-left: 0;
-	// 			text-align: right;
-	// 			&::after {
-	// 				content: "|";
-	// 				width: 2px;
-	// 				padding-left: 10px;
-	// 				color: #404040;
-	// 				display: inline-block;
-	// 			}
-	// 		}
-	// 		&:nth-child( 2 ) {
-	// 			width: 50%;
-	// 			padding-left: 15px;
-	// 			text-align: left;
-	// 			a {
-	// 				&::after {
-	// 					content: "";
-	// 				}
-	// 			}
-	// 		}
-	// 		&:nth-child( 3 ) {
-	// 			clear: left;
-	// 			float: left;
-	// 		}
-	// 		&:nth-child( 4 ) {
-	// 			&::before {
-	// 				content: "|";
-	// 				width: 2px;
-	// 				padding-right: 15px;
-	// 				color: #404040;
-	// 				display: inline-block;
-	// 			}
-	// 			&::after {
-	// 				content: "|";
-	// 				width: 2px;
-	// 				padding-left: 10px;
-	// 				color: #404040;
-	// 				display: inline-block;
-	// 			}
-	// 		}
-	// 		&:last-child {
-	// 			a {
-	// 				&::after {
-	// 					content: "";
-	// 				}
-	// 			}
-	// 		}
-	// 		a {
-	// 			color: #ccc;
-	// 			margin: 0;
-	// 			padding: 0;
-	// 			text-decoration: none;
-	// 		}
-	// 	}
-	// }
 }

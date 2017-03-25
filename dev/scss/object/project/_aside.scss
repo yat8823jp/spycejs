@@ -24,30 +24,30 @@
 		&__list {
 			width: 100%;
 			margin-bottom: 30px;
-			border-bottom: 2px solid #e6e6e6;
+			border-bottom: 1px solid #e6e6e6;
 			&:last-child {
 				border: none;
 			}
 			&__item {
-				width: 43%;
-				margin-right: 20px;
-				margin-bottom: 25px;
+				width: 47%;
+				margin: 0 0 25px;
+				padding-left: 9px;
 				display: inline-block;
+				background: url( ../images/common/ico/triangle.png ) no-repeat;
+				background-position: 0 7px;
+				background-size: 6px 6px;
+				vertical-align: top;
+				box-sizing: border-box;
 				a {
-					width: 43%;
-					margin-left: 14px;
 					font-size: 1.4rem;
 					text-decoration: none;
 					color: #444;
 					display: inline;
-					i {
-						margin-right: 14px;
-						margin-left: -14px;
-						top: 5px;
-					}
+					box-sizing: border-box;
 				}
 				&--sp {
 					@extend .p-site-aside__section3__list__item;
+					background-position: 0 10px;
 					width: 100%;
 					a {
 						width: 100%;
@@ -57,9 +57,15 @@
 							top: 8px;
 						}
 					}
+					&--ttl {
+						@extend .p-site-aside__section3__list__item--sp;
+						font-size: 1.8rem;
+						color: $color--main;
+					}
 				}
 				&--ttl {
 					@extend .p-site-aside__section3__list__item--sp;
+					background-position: 0 6px;
 					a {
 						font-size: 1.4rem;
 						color: #999;

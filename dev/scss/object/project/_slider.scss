@@ -4,18 +4,23 @@
 	}
 	&--insert {
 		&__separator {
-			width: 90%;
+			width: 100%;
 			margin: auto;
 		}
 		&__box {
-			width: 345px;
-			margin: auto;
+			// width: 345px;
+			margin: auto 10px;
 			padding: 50px 15px 25px;
 			background: #fff;
 			border-radius: 4px;
 			position: relative;
 			display: block;
 			overflow: hidden;
+			&--item2 {
+				@extend .p-slider--insert__box;
+				margin: auto 15px;
+				padding: 15px;
+			}
 		}
 	}
 }

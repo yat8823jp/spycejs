@@ -4,23 +4,22 @@
 	// padding-left: 20px;
 	&::before {
 		content: '';
-		width: 15px;
-		height: 15px;
+		width: 10px;
+		height: 10px;
 		border: 0px;
-		border-top: solid 2px #fff;
-		border-right: solid 2px #fff;
+		border-top: solid 1px #585c5e;
+		border-right: solid 1px #585c5e;
 		transform: rotate( 135deg );
 		position: absolute;
-		top: 25%;
+		top: 20%;
 		left: 0;
-		margin-top: -4px;
 	}
 	&--bottom {
 		@extend .u-arrow;
 	}
 	&--top {
+		@extend .u-arrow;
 		&::before {
-			@extend .u-arrow;
 			transform: rotate( -45deg );
 		}
 	}

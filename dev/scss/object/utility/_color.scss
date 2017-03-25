@@ -2,7 +2,13 @@
 	&--glay {
 		color: #444;
 	}
+	&--glay--smenu {
+		color: #4d5052;
+	}
 	&--white {
 		color: #fff;
+	}
+	&--red {
+		color: $color--main;
 	}
 }

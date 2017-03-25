@@ -1,1 +1,0 @@
-{"version":3,"file":"mixin.css","sources":["foundation/mixin.scss"],"sourcesContent":["@mixin beforeafter {\n\tcontent: \"\";\n\tdisplay: block;\n}\n@mixin linkdefault {\n\n}\n"],"mappings":"","names":[]}

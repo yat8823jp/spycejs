@@ -3,15 +3,22 @@
 	background: $color--main;
 	&__menu {
 		height: 35px;
+		margin: 0;
+		padding: 0;
 		display: flex;
 		flex-flow: nowrap;
 		align-items: center;
 		justify-content: space-around;
 		&__item {
+			width: 33%;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			font-size: 1.3rem;
 			a {
 				font-family: 'Raleway', sans-serif;
-				font-size: 1.3rem;
 				color: #fff;
+				text-align: center;
 				text-decoration: none;
 			}
 

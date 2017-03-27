@@ -30,30 +30,33 @@ var gulp = require( 'gulp' ),
  * Sass
  */
 gulp.task( 'scss', function() {
-	gulp.src( paths.rootDir + '/scss/**/*.scss' )
+	gulp.src( paths.rootDir + '/top/scss/**/*.scss' )
 		.pipe( sourcemaps.init() )
-		.pipe( plumber({
+		.pipe( plumber( {
 			errorHandler: notify.onError( 'Error: <%= error.message %>' )
-		}) )
+		} ) )
 		.pipe( scss() )
-		.pipe( pleeease() )
+		.pipe( pleeease( {
+			sass: true,
+			minifier: false //圧縮の有無 true/false
+		} ) )
 		.pipe( sourcemaps.write( './' ) )
-		.pipe( gulp.dest( paths.rootDir + '/css' ) );
+		.pipe( gulp.dest( paths.rootDir + '/top/css' ) );
 });
 
 /*
  * Pleeease
  */
 gulp.task( 'pleeease', function() {
-	return gulp.src( paths.rootDir + '/css/*.css' )
-		.pipe( pleeease({
-			// minifier: false, //圧縮の有無 true/false
-			sass: true
-		}) )
+	return gulp.src( paths.rootDir + '/top/css/*.css' )
+		.pipe( pleeease ( {
+			sass: true,
+			minifier: false //圧縮の有無 true/false
+		} ) )
 		.pipe( plumber ( {
 			errorHandler: notify.onError( 'Error: <%= error.message %>' )
 		} ) )
-		.pipe( gulp.dest( paths.rootDir + '/css' ) );
+		.pipe( gulp.dest( paths.rootDir + '/top/css' ) );
 });
 
 /*
@@ -124,11 +127,11 @@ gulp.task( 'default', ['browser-sync'], function() {
 	var bsList = [
 		paths.rootDir + '/**/*.html',
 		paths.rootDir + '/**/*.php',
-		paths.rootDir + '/js/**/*.js',
-		paths.rootDir + '/css/*.css'
+		paths.rootDir + '/top/js/**/*.js',
+		paths.rootDir + '/top/css/*.css'
 	];
 	gulp.watch( paths.rootDir + '/ejs/**/*.ejs', ['ejs'] );
-	gulp.watch( paths.rootDir + '/scss/**/*.scss', ['scss'] );
+	gulp.watch( paths.rootDir + '/top/scss/**/*.scss', ['scss'] );
 	gulp.watch( bsList, ['bs-reload'] );
 });
 
@@ -142,7 +145,7 @@ gulp.task( 'devcopy', function () {
 		'!'+ paths.rootDir + '/css/**',
 		'!'+ paths.rootDir + '/js/**',
 		'!'+ paths.rootDir + '/ejs/**',
-		'!'+ paths.rootDir + '/scss/**',
+		'!'+ paths.rootDir + '/top/scss/**',
 		'!'+ paths.rootDir + '/images/**',
 		'!'+ paths.rootDir + '/**/*.html'
 	], {

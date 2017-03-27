@@ -3,8 +3,12 @@
 		display: flex;
 		flex-wrap: nowrap;
 		margin-bottom: 40px;
-		img {
-			margin-bottom: 14px;
+		&__item {
+			width: 50%;
+			img {
+				width: 100%;
+				margin-bottom: 14px;
+			}
 		}
 		figcaption {
 			margin-left: 15px;
@@ -12,6 +16,11 @@
 		a {
 			text-decoration: none;
 			color: #444;
+		}
+	}
+	&--imgcover {
+		img {
+			width: 100%;
 		}
 	}
 	&--img-rtxt {
@@ -27,7 +36,8 @@
 		}
 		figcaption {
 			padding: 14px;
-			font-size: 1.4rem;
+			// font-size: 1.4rem;
+			font-size: 4vw;
 		}
 	}
 	&--cover {

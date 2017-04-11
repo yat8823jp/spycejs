@@ -56,10 +56,11 @@ jQuery( function( $ ) {
 		}
 		$( this ).parent().next( '.is-open' ).slideToggle( "", function() {
 			$( this ).prev().children( 'a' ).toggleClass( 'u-border--bottom0' );
-			} );
+		} );
 		$( this ).parent().next( '.is-close' ).slideToggle( "", function() {
 			$( this ).prev().children( 'a' ).toggleClass( 'u-border--bottom0' );
-			} );
+		} );
+		return false;
 	} );
 
 

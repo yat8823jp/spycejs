@@ -17,9 +17,9 @@ jQuery( function( $ ) {
 	$( '.is-close__bt, .is-hamburger__bg' ).click( function( e ) {
 		e.stopPropagation( e );
 		bodyCss( current_scrollY );
-		$( 'html, body' ).prop( { scrollTop: current_scrollY } );
-		$( '.is-hamburger__bt' ).toggleClass( 'is-hamburger--active' );
+		// $( '.is-hamburger__bt' ).toggleClass( 'is-hamburger--active' );
 		$( '.is-hamburger__menu' ).toggleClass( 'is-hamburger--active' );
+		// $( '.is-hamburger__bg' ).fadeTo( 600, 2.0 );
 		$( '.is-hamburger__bg' ).toggleClass( 'is-hamburger--active' );
 		$('.scrollbar').hide();
 		event.preventDefault();

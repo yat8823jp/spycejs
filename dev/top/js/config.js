@@ -8,9 +8,9 @@ jQuery( function( $ ) {
 	$( '.is-slider--mainvisual' ).slick( {
 		autoplay: true,
 		dots: true,
-		arrows: false,
 		autoplaySpeed: 6000,
-		speed: 900
+		speed: 900,
+		arrows: true
 	} );
 	$( '.is-slider--insert__information' ).slick( {
 		arrows: false,
@@ -54,9 +54,16 @@ jQuery( function( $ ) {
 			$( this ).children( "i" ).addClass( 'u-arrow--top' );
 			$( this ).children( "i" ).removeClass( 'u-arrow--bottom' );
 		}
-		$( this ).parent().next( '.is-open' ).slideToggle();
-		$( this ).parent().next( '.is-close' ).slideToggle();
+		$( this ).parent().next( '.is-open' ).slideToggle( "", function() {
+			$( this ).prev().toggleClass( 'u-border--bottom0' );
+			} );
+		$( this ).parent().next( '.is-close' ).slideToggle( "", function() {
+			$( this ).prev().toggleClass( 'u-border--bottom0' );
+			} );
 	} );
+
+
+
 
 	//トップ固定
 	$( window ).scroll( function() {
@@ -69,7 +76,9 @@ jQuery( function( $ ) {
 			$( window ).on( 'load resize', function() {
 				initW();
 			} );
-			$( '.l-header' ).removeClass( 'fixed' );
+			if( ! $( '.is-hamburger__bt' ).hasClass( 'is-hamburger--active' ) ) {
+				$( '.l-header' ).removeClass( 'fixed' );
+			}
 		}
 	} );
 

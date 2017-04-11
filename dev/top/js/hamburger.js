@@ -6,7 +6,7 @@ jQuery( function( $ ) {
 		$( 'body' ).css( {
 			position: 'fixed',
 			top: -1 * current_scrollY
-		} );
+		} ).addClass('is-hamburger--open');
 		$( '.is-hamburger__bt' ).toggleClass( 'is-hamburger--active' );
 		$( '.is-hamburger__bg' ).toggleClass( 'is-hamburger--active' );
 		$( '.is-hamburger__menu' ).toggleClass( 'is-hamburger--active' );
@@ -28,6 +28,6 @@ jQuery( function( $ ) {
 		$( 'body' ).css( {
 			'position': 'relative',
 			'top': 0
-		} );
+		} ).removeClass('is-hamburger--open');
 	}
 } );

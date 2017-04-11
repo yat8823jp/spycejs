@@ -1,6 +1,5 @@
 .p-top {
 	&--mainvisual {
-
 	}
 	&--attention {
 		width: 100%;
@@ -12,6 +11,7 @@
 		}
 		&__item {
 			padding-left: 23px;
+			font-size: 1.6rem;
 			background: url( ../images/common/ico/apostrophe.png ) no-repeat;
 			background-size: 16px 16px;
 			background-position: left 2px;
@@ -32,6 +32,9 @@
 			&--center {
 				@extend .p-top--section__ttl;
 				text-align: center;
+				.u-icon--instagram:before{
+					 font-size: 32px;
+				}
 				img {
 					width: 32px;
 				}
@@ -39,7 +42,6 @@
 		}
 		a {
 			text-decoration: none;
-			color: #444;
 		}
 		&__endbt {
 			margin-top: 40px;
@@ -54,41 +56,40 @@
 				margin: 0 0 25px;
 				font-family: 'Raleway', sans-serif;
 				color: #fff;
-				font-size: 2.0rem;
+				font-size: 1.6rem;
 			}
 		}//&--insert
 		&--insert--thin {
 			margin: 15px;
 			background: #fff7f8;
 		}
-
 	}//&--section
+	&--brands {
+		figcaption {
+			font-size: 2.0rem;
+		}
+	}
 	&--information {
 		&__item {
+			text-align: left;
 			&__ttl {
 				width: 140px;
-				margin: 0;
+				margin: 0 0 16px;
 				padding: 0;
-				font-size: 1.2rem;
+				font-size: 1.4rem;
 				font-weight: bold;
 				color: $color--main--text;
-				top: 27px;
-				left: 15px;
-				text-align: left;
-				position: absolute;
-			}
-			&__time {
-				// font-weight: 600;
-				color: #b2b2b2;
-				top: 25px;
-				right: 15px;
-				position: absolute;
 			}
 			&__txt {
+				margin-bottom: 16px;
 				font-size: 1.5rem;
 				line-height: 1.8;
 				color: #444;
 				text-align: left;
+			}
+			&__time {
+				color: #b2b2b2;
+				font-size: 1.4rem;
 			}
 		}
 	}
@@ -98,7 +99,7 @@
 		&__ttl {
 			margin-bottom: 20px;
 			padding-bottom: 3px;
-			font-size: 1.4rem;
+			font-size: 1.6rem;
 			border-bottom: 1px solid #ebebeb;
 		}
 		&__data {
@@ -119,28 +120,46 @@
 				&__name {
 					margin: 0;
 					padding: 0;
-					font-size: 1.4rem;
+					font-size: 1.6rem;
+					color: #444;
 				}
 				figcaption {
+					color: #444;
 					position: relative;
 				}
 				&__price {
 					margin: 0;
 					padding: 0;
-					font-size: 1.4rem;
+					font-size: 1.6rem;
 				}
 				&__num {
 					bottom: 0;
 					right: 0;
 					position: absolute;
+					z-index: -1;
 				}
 			}
 		}
 	}//&--ranking
+	&--present {
+		padding: 15px 18px;
+		background: #fff7f8;
+		p {
+			margin: 0 0 15px;
+			padding: 0;
+			font-size: 1.6rem;
+		}
+		a {
+			font-size: 1.4rem
+		}
+	}
 	&--pickup {
 		&__item {
 			&__img {
 				width: 100%;
+			}
+			a{
+				text-decoration: none;
 			}
 			figcaption {
 				text-align: left;
@@ -166,21 +185,41 @@
 			}
 		}
 	}//&--pickup
+	&--howto {
+		img {
+			margin-bottom: 10px;
+		}
+		figcaption {
+			font-size: 1.6rem;
+		}
+	}
 	&--regist {
-		padding: 27px 20px;
+		padding: 14px 20px;
 		background: url( ../images/top/regist/bg.jpg ) no-repeat;
 		background-size: cover;
+		color: #444;
+		&__logo {
+			width: 140px;
+			margin: 0 auto 5px;
+			display: block;
+		}
+		&__txt {
+			margin-bottom: 15px;
+			padding: 0 50px;
+			font-size: 1.6rem;
+		}
+		&__button {
+			width: 100%;
+			height: 35px;
+			display: block;
+		}
 		&__set {
 			display: flex;
 			justify-content: space-around;
-			&__logo {
-				width: 140px;
-				margin-right: 20px;
-			}
-			&__txt {
-				width: 160px;
-			}
 			a {
+				width: 100%;
+				height: 100%;
+				font-size: 1.4rem;
 				color: #fff;
 			}
 		}

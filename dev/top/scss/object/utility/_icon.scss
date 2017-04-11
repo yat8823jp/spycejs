@@ -63,9 +63,9 @@
 		@extend .u-icon;
 		&::after {
 			width: 16px;
-			height: 16px;
+			height: 21px;
 			background: url( ../images/common/ico/menu/search.png ) no-repeat;
-			background-size: 16px 16px;
+			background-size: 16px auto;
 			top: 0;
 			left: 0;
 		}
@@ -74,18 +74,44 @@
 		@extend .u-icon--search;
 		&::after {
 			width: 16px;
-			height: 16px;
+			height: 21px;
 			background: url( ../images/common/ico/menu/key.png ) no-repeat;
-			background-size: 16px 16px;
+			background-size: 16px auto;
+			top: -1px;
 		}
 	}
 	&--shop {
 		@extend .u-icon--search;
 		&::after {
 			width: 16px;
-			height: 16px;
+			height: 21px;
 			background: url( ../images/common/ico/menu/shop.png ) no-repeat;
-			background-size: 16px 16px;
+			background-size: 16px auto;
+			background-position: center;
+			top: -1px;
 		}
 	}
+	&--list {
+		@extend .u-icon--search;
+		&::after {
+			width: 13px;
+			height: 10px;
+			background: url( ../images/common/ico/menu/list.png ) no-repeat;
+			background-size: 13px 10px;
+			background-position: center;
+			top: 2px;
+		}
+	}
+	&--store {
+		@extend .u-icon--search;
+		&::after {
+			width: 14px;
+			height: 12px;
+			background: url( ../images/common/ico/menu/store.png ) no-repeat;
+			background-size: 14px 12px;
+			background-position: center;
+			top: 2px;
+		}
+	}
+
 }

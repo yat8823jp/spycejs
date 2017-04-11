@@ -31,12 +31,6 @@
 	&--body {
 		position: fixed !important;
 	}
-	&--open {
-		.c-hamburger__bg {
-			&::after {
-			}
-		}
-	}
 	&__bg {
 		&::after {
 			content: "";
@@ -57,5 +51,8 @@
 				transition: all .2s;
 			}
 		}
+	}
+	&--open {
+		position: fixed;
 	}
 }

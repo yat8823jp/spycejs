@@ -1047,6 +1047,9 @@ li {
   -webkit-transition: all .2s;
   transition: all .2s; }
 
+.is-hamburger--open {
+  position: fixed; }
+
 .u-clearfix:after {
   content: "";
   clear: both;

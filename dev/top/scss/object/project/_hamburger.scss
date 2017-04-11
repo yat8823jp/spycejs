@@ -19,27 +19,43 @@
 			visibility: visible;
 			overflow-y: scroll;
 		}
+		&:after {
+			transition: all 1s;
+			opacity: 0;
+
+		}
 	}
 }//.c-hamburger
 
-.is-hamburger--body {
-	position: fixed !important;
-}
-.c-hamburger__bg::after{
-	transition: all 1s;
-	opacity: 0;
-}
-
-body.is-hamburger--open .c-hamburger__bg::after{
-	content: "";
-	display: block;
-	width: 100%;
-	height: 100%;
-	position:fixed;
-	left:0;
-	top: 0;
-	background: #000;
-	z-index: 1;
-	opacity: 0.5;
-  transition: all 4s;
+.is-hamburger {
+	&--body {
+		position: fixed !important;
+	}
+	&--open {
+		.c-hamburger__bg {
+			&::after {
+			}
+		}
+	}
+	&__bg {
+		&::after {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			position:fixed;
+			left:0;
+			top: 0;
+			background: #000;
+			z-index: 1;
+			opacity: 0;
+			transition: all .2s;
+		}
+		&.is-hamburger--active {
+			&::after {
+				opacity: 0.5;
+				transition: all .2s;
+			}
+		}
+	}
 }

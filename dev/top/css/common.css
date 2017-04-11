@@ -1156,7 +1156,7 @@ li {
   display: block; }
 
 .u-border--bottom0 {
-  border-bottom: 0; }
+  border-bottom: 0 !important; }
 
 .u-color--glay {
   color: #444; }

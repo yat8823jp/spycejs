@@ -1,5 +1,5 @@
 .p-snavi {
-	width: 90%;
+	width: calc(100% - 75px);
 	background: #fafafa;
 	right: 0;
 	position: absolute;
@@ -9,8 +9,8 @@
 		position: relative;
 		&__item {
 			width: 100%;
-			height: 50px;
-			line-height: 50px;
+			/*height: 50px;*/
+			line-height: 48px;
 			text-align: left;
 			color: #4d5052;
 			border-bottom: 2px solid #e6edf2;
@@ -67,10 +67,13 @@
 			&--close {
 				@extend .p-snavi__menu__item;
 				text-align: right;
+				height: 64px;
+				line-height: 64px;
 				a {
 					width: 16px;
 					height: 16px;
-					margin-top: 16px;
+					padding: 0;
+					margin: 24px 16px 0 0;
 					display: inline-block;
 				}
 			}
@@ -89,9 +92,9 @@
 						width: 100%;
 						height: 35px;
 						padding: 0;
-						border: 1px solid #e6edf2;
+						border: 1px solid #D9E0E5;
 						border-radius: 35px;
-						background: #fff;
+						background: #E5ECF1;
 						color: #000;
 					}
 				}
@@ -99,12 +102,20 @@
 			&--regist {
 				@extend .p-snavi__menu__item--search;
 				padding: 0;
-				height: 50px;
+				height: 75px;
+				line-height: 75px;
 			}
 			&--shop {
 				@extend .p-snavi__menu__item--search;
 				padding: 0;
-				height: 50px;
+				height: 75px;
+				line-height: 75px;
+			}
+			&--brandlist {
+				@extend .p-snavi__menu__item--search;
+				padding: 0;
+				height: 75px;
+				line-height: 75px;
 			}
 			&__bt {
 				position: relative;
@@ -132,13 +143,15 @@
 				}
 			}
 		}//&__item
+
 		&__lv2 {
 			height: 100%;
-			padding-left: 40px;
+			padding-left: 10px;
 			display: block;
 			border-bottom: 2px solid #e6edf2;
 			box-sizing: border-box;
 			display: none;
+			padding: 0 0 6px 10px;
 			&__list {
 				height: 100%;
 				background: #e5ecf1;
@@ -154,7 +167,7 @@
 						border-bottom: none;
 					}
 					a {
-						padding: 0 20px;
+						padding: 0 10px;
 					}
 				}
 				.p-snavi__menu__item--w50 {

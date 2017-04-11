@@ -29,6 +29,10 @@ Static Page develop gulp-ejs
 * [sanitize.css](https://10up.github.io/sanitize.css/)
 * [sass](http://sass-lang.com/)
 
+##  各種バージョン
+node 4.4.7
+gulp 3.9.1
+
 ## 設定ファイル
 
 * .editorcoding 文字コード設定

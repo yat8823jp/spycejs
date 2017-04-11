@@ -32,12 +32,22 @@
 			border-bottom: 1px solid #eee;
 		}
 		img {
-			width: 30%;
+			width: 105px;
 		}
 		figcaption {
-			padding: 14px;
-			// font-size: 1.4rem;
-			font-size: 4vw;
+			padding: 9px;
+			color: #444;
+			font-size: 1.4rem;
+		}
+		&--noborder {
+			@extend .c-box--img-rtxt;
+			border-top: 0;
+			&__end {
+				border-bottom: 0;
+			}
+			figcaption {
+				padding: 0 0 0 18px;
+			}
 		}
 	}
 	&--cover {
@@ -72,6 +82,17 @@
 				text-decoration: none;
 				font-size: 1.4rem;
 				line-height: 1.6;
+				position: relative;
+				&::before {
+					content: "";
+					width: 11px;
+					height: 9px;
+					background: url( ../images/common/ico/pc.png );
+					background-size: 100%;
+					top: -2px;
+					display: inline-block;
+					position: relative;
+				}
 			}
 		}
 

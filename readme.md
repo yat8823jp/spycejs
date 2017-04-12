@@ -60,7 +60,7 @@ Static Page develop gulp-ejs
 
 ### Author
 
-YAT [http://wp.yat-net.com](http://wp.yat-net.com)  
+YAT [http://wp.yat-net.com](http://wp.yat-net.com)
 Chiaki [http://mellowchanter.info/](http://mellowchanter.info/)
 
 ###Version

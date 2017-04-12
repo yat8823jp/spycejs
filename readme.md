@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Spycejs Gulp　開発環境構築
 Static Page develop gulp-ejs
 
@@ -106,3 +107,6 @@ Chiaki [http://mellowchanter.info/](http://mellowchanter.info/)
 
 #### 1.0
 * First release
+=======
+# project
+>>>>>>> cbdf3cfbd0d99ed6b07ca1dc77a357ad411e7ba8
